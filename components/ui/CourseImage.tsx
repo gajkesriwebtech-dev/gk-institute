@@ -1,0 +1,41 @@
+"use client";
+
+import React, { useState } from "react";
+import { FALLBACK_COURSE_IMAGE } from "@/lib/cloudinary";
+
+interface CourseImageProps {
+  src?: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  className?: string;
+  style?: React.CSSProperties;
+  sizes?: string;
+}
+
+export const CourseImage: React.FC<CourseImageProps> = ({
+  src,
+  alt,
+  width = 1200,
+  height = 675,
+  className = "",
+  style,
+}) => {
+  const [hasError, setHasError] = useState(false);
+  const finalSrc = !src || hasError ? FALLBACK_COURSE_IMAGE : src;
+
+  return (
+    <img
+      src={finalSrc}
+      alt={alt}
+      width={width}
+      height={height}
+      style={style}
+      className={className}
+      onError={() => setHasError(true)}
+      loading="lazy"
+    />
+  );
+};
+
+export default CourseImage;
