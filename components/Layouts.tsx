@@ -94,7 +94,7 @@ const CoursesMegaMenuContent: React.FC<{ onClose: () => void }> = ({ onClose }) 
           <div className="grid grid-cols-1 gap-y-4">
             {popularCourses.map(course => (
               <button
-                key={course.slug}
+                key={course.id}
                 onClick={() => handleNavigate(`/courses/${course.slug}`)}
                 className="group flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400 hover:text-[#1F4037] dark:hover:text-white transition-all text-left font-bold"
               >
@@ -119,7 +119,7 @@ const CoursesMegaMenuContent: React.FC<{ onClose: () => void }> = ({ onClose }) 
                 <div className="grid grid-cols-1 gap-y-3 flex-1">
                   {cat.courses.map(course => (
                     <button
-                      key={course.slug}
+                      key={course.id}
                       onClick={() => handleNavigate(`/courses/${course.slug}`)}
                       className="group flex items-center gap-3 text-sm text-slate-600 dark:text-slate-400 hover:text-[#1F4037] dark:hover:text-white transition-all text-left font-bold"
                     >
@@ -308,7 +308,7 @@ const Footer: React.FC = () => {
                   </h5>
                   <ul className="space-y-2.5">
                     {coursesByCategory[cat].map(course => (
-                      <li key={course.slug}>
+                      <li key={course.id}>
                         <button
                           onClick={() => navigate(`/courses/${course.slug}`)}
                           className="text-sm font-bold text-slate-600 dark:text-slate-400 hover:text-[#1F4037] dark:hover:text-white transition-all text-left flex items-start group"
@@ -527,7 +527,7 @@ export const PublicLayout: React.FC<{ children: React.ReactNode }> = ({ children
                                 <div className="grid grid-cols-1 gap-y-2">
                                   {cat.courses.map(course => (
                                     <button
-                                      key={course.slug}
+                                      key={course.id}
                                       onClick={() => handleNavClick('Course', `/courses/${course.slug}`)}
                                       className="text-sm font-bold text-slate-600 dark:text-slate-400 text-left"
                                     >

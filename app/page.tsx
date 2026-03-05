@@ -604,7 +604,7 @@ const LandingPage = () => {
                         <div className="grid md:grid-cols-3 gap-8 animate-fade-in relative z-30">
                             {displayedCourses.map((course, idx) => (
                                 <Card
-                                    key={course.slug}
+                                    key={course.id}
                                     variant="poster"
                                     index={idx}
                                     className="flex flex-col h-full cursor-pointer group transition-all duration-500 hover:-translate-y-2 bg-white dark:bg-slate-900 z-30 relative shadow-premium hover:shadow-2xl border border-slate-200 dark:border-slate-800 hover:border-[#1F4037] dark:hover:border-slate-600"
