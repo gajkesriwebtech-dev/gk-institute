@@ -140,9 +140,9 @@ export const EduBot: React.FC = () => {
                   Hi there! I'm your AI guide. I can help you find courses, check eligibility, or connect you with our team.
                 </p>
                 <div className="space-y-3 mt-auto">
-                  <Button size="sm" variant="primary" onClick={handleStartChat} className="w-full justify-center shadow-lg shadow-brand-500/20 py-3 rounded-xl text-sm">
+                  {/*<Button size="sm" variant="primary" onClick={handleStartChat} className="w-full justify-center shadow-lg shadow-brand-500/20 py-3 rounded-xl text-sm">
                     <span className="mr-2">💬</span> Start Chat
-                  </Button>
+                  </Button>*/}
                   <Button size="sm" variant="outline" onClick={() => { setShowModal(false); router.push('/contact'); }} className="w-full justify-center py-3 rounded-xl text-sm">
                     <span className="mr-2">📞</span> Contact Us
                   </Button>

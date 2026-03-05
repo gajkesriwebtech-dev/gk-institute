@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/context/ThemeContext';
-import { AuthProvider } from '@/context/AuthContext';
 import { SITE_URL, SITE_NAME, SITE_DESCRIPTION } from '@/constants/site';
 import { cld } from '@/lib/cloudinary';
 
@@ -53,11 +52,9 @@ export default function RootLayout({
                 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" />
             </head>
             <body className="bg-white dark:bg-slate-950 transition-colors duration-300 font-sans">
-                <AuthProvider>
-                    <ThemeProvider>
-                        {children}
-                    </ThemeProvider>
-                </AuthProvider>
+                <ThemeProvider>
+                    {children}
+                </ThemeProvider>
             </body>
         </html>
     );

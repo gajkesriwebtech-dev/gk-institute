@@ -1,6 +1,4 @@
 import { NextResponse } from "next/server";
-import { connectToDatabase } from "@/lib/server/db";
-import ContactSubmissionModel from "@/models/ContactSubmission";
 import { sendContactInternalMail, sendContactConfirmationMail } from "@/lib/server/institute-email";
 
 export async function POST(req: Request) {
@@ -21,19 +19,7 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "Please enter a valid mobile number" }, { status: 400 });
     }
 
-    // 2. Database Storage
-    await connectToDatabase();
-
-    const submission = await ContactSubmissionModel.create({
-      name: name.trim(),
-      email: email.trim().toLowerCase(),
-      phone: phone?.trim(),
-      message: message?.trim() || "No message provided",
-      courseSlug: courseSlug || "general",
-      sourcePage: sourcePage || "Direct"
-    });
-
-    // 3. Send Emails
+    // 2. Send Emails
     const emailPayload = {
       name: name.trim(),
       email: email.trim().toLowerCase(),
@@ -44,7 +30,6 @@ export async function POST(req: Request) {
     };
 
     // We don't want to block the response on email sending, but for reliability in this simple setup we can await them
-    // or use Promise.allSettled to ensure we try both
     await Promise.allSettled([
       sendContactInternalMail(emailPayload),
       sendContactConfirmationMail(emailPayload)
@@ -52,8 +37,7 @@ export async function POST(req: Request) {
 
     return NextResponse.json({
       success: true,
-      message: "Thank you. Our team will contact you shortly.",
-      submissionId: submission._id
+      message: "Thank you. Our team will contact you shortly."
     });
 
   } catch (error) {
