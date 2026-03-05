@@ -13,7 +13,7 @@ export interface PaymentConfirmationPayload {
   email: string;
   name?: string;
   courses: string[];
-  paymentMethod: "offline" | "stripe";
+  paymentMethod: "offline";
 }
 
 function escapeHtml(value: string): string {
@@ -154,10 +154,9 @@ export async function sendContactConfirmationMail(
     const content = `
       <p style="margin:0 0 10px;">Hi ${safeName},</p>
       <p style="margin:0 0 10px;">Thank you for contacting GK Institute. Our team will respond shortly with the next steps.</p>
-      ${
-        courseLabel
-          ? `<p style="margin:0 0 10px;">Your submitted course interest: <strong>${escapeHtml(courseLabel)}</strong></p>`
-          : ""
+      ${courseLabel
+        ? `<p style="margin:0 0 10px;">Your submitted course interest: <strong>${escapeHtml(courseLabel)}</strong></p>`
+        : ""
       }
       <p style="margin:0;">If you need urgent support, reply to this email.</p>
     `;
@@ -186,8 +185,7 @@ export async function sendPaymentConfirmationMail(
     }
 
     const safeName = data.name ? escapeHtml(data.name) : "Learner";
-    const paymentMethod =
-      data.paymentMethod === "stripe" ? "Stripe" : "Offline Verification";
+    const paymentMethod = "Offline Verification";
     const coursesHtml = data.courses
       .map((course) => `<li style="margin:0 0 6px;">${escapeHtml(course)}</li>`)
       .join("");

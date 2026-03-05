@@ -23,7 +23,7 @@ function PlanLearningContent() {
   const [selectedCourses, setSelectedCourses] = useState<string[]>([]);
   const [promoInput, setPromoInput] = useState("");
   const [appliedPromo, setAppliedPromo] = useState<{ code: string; percent: number } | null>(null);
-  const [paymentMethod, setPaymentMethod] = useState<PaymentMethod>("stripe");
+  const [paymentMethod, setPaymentMethod] = useState<PaymentMethod>("offline");
   const [primaryCourse, setPrimaryCourse] = useState("");
   const [promoMessage, setPromoMessage] = useState("");
 
@@ -109,8 +109,8 @@ function PlanLearningContent() {
                   key={course.id}
                   onClick={() => toggleCourse(course.id)}
                   className={`text-left rounded-xl border p-4 transition ${isSelected
-                      ? "border-brand-500 bg-brand-50 dark:bg-brand-900/20"
-                      : "border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900"
+                    ? "border-brand-500 bg-brand-50 dark:bg-brand-900/20"
+                    : "border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900"
                     }`}
                 >
                   <p className="font-semibold text-slate-900 dark:text-white">{course.title}</p>
@@ -194,7 +194,6 @@ function PlanLearningContent() {
               onChange={(e) => setPaymentMethod(e.target.value as PaymentMethod)}
               className="w-full rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2 text-sm"
             >
-              <option value="stripe">Stripe</option>
               <option value="offline">Offline</option>
             </select>
           </div>

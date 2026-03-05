@@ -12,7 +12,6 @@ export interface PricingPlan {
   currency: "INR";
   interval: "month" | "year" | "one_time";
   amount: number;
-  stripePriceId: string;
   isPopular: boolean;
   trialDays?: number;
   features: PricingFeature[];
@@ -27,7 +26,7 @@ export const PRICING_PLANS: PricingPlan[] = [
     currency: "INR",
     interval: "month",
     amount: 1499,
-    stripePriceId: "price_starter_monthly_001",
+
     isPopular: false,
     trialDays: 7,
     features: [
@@ -44,7 +43,7 @@ export const PRICING_PLANS: PricingPlan[] = [
     currency: "INR",
     interval: "month",
     amount: 3999,
-    stripePriceId: "price_pro_monthly_001",
+
     isPopular: true,
     trialDays: 7,
     features: [
@@ -61,7 +60,7 @@ export const PRICING_PLANS: PricingPlan[] = [
     currency: "INR",
     interval: "year",
     amount: 89999,
-    stripePriceId: "price_team_annual_001",
+
     isPopular: false,
     features: [
       { id: "pf_007", label: "Up to 30 learner seats", included: true },
