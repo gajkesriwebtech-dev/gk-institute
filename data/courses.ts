@@ -15,7 +15,7 @@ export const FULL_PROGRAM_CATALOG: Program[] = [
         category: "Technology & Development",
         description: "An intensive immersion into full stack engineering. Master MongoDB, Express, React, and Node with advanced architecture and deployment.",
         duration: "6 Months",
-        thumbnail: cld("courses/mern-stack-development", 600),
+        thumbnail: cld("mern_d6lnmj", 600),
         price: 45000,
         originalPrice: 65000,
         highlights: [
