@@ -39,6 +39,6 @@
     "node_modules",
     "legacy_backup",
     "pages_backup",
-    "archive"
+    "_archive"
   ]
 }
