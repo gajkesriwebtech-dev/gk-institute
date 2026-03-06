@@ -6,7 +6,7 @@ cmds = ["npm ci"]
 
 [phases.build]
 cmds = [
-  "bash -lc \"shopt -s extglob; if [ -d .next ]; then rm -rf .next/!(cache); fi\"",
+  "sh -c 'if [ -d .next ]; then find .next -mindepth 1 -not -path \".next/cache*\" -exec rm -rf {} +; fi'",
   "npm run build"
 ]
 
