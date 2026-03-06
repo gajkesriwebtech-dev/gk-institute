@@ -5,7 +5,10 @@ nixPkgs = ["nodejs_20"]
 cmds = ["npm ci"]
 
 [phases.build]
-cmds = ["rm -rf .next", "npm run build"]
+cmds = [
+  "bash -lc \"shopt -s extglob; if [ -d .next ]; then rm -rf .next/!(cache); fi\"",
+  "npm run build"
+]
 
 [start]
 cmd = "npm run start"
