@@ -38,6 +38,7 @@
   "exclude": [
     "node_modules",
     "legacy_backup",
-    "pages_backup"
+    "pages_backup",
+    "archive"
   ]
 }

@@ -47,3 +47,6 @@ desktop.ini
 
 # Project Specific
 /lib/generated/prisma
+
+# Archives
+archive/node_modules

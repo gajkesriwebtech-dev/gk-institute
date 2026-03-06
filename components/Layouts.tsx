@@ -243,11 +243,6 @@ const Footer: React.FC = () => {
                   </div>
                 </div>
               </div>
-
-              <div className="flex-1 max-w-[280px] lg:max-w-none">
-                <p className="text-[10px] uppercase tracking-widest text-slate-400 font-black mb-4">Official Certification</p>
-                <GKCertificate />
-              </div>
             </div>
 
             {/* Social Links with better styling */}
