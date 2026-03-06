@@ -89,7 +89,7 @@ export const FULL_PROGRAM_CATALOG: Program[] = [
         category: "Technology & Development",
         description: "Beyond simple sites. Master custom themes, plugin development, and high-security WordPress architectures.",
         duration: "4 Months",
-        thumbnail: cld("courses/wordpress-development", 600),
+        thumbnail: cld("wordpress_ghuw0t", 600),
         price: 20000,
         originalPrice: 30000,
         highlights: [
