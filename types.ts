@@ -103,6 +103,7 @@ export interface UnifiedCourse {
 
   // Visuals
   thumbnail: string;
+  image?: string;
 
   // Pricing & Duration
   price: number;

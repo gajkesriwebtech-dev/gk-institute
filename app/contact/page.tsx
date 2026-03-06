@@ -147,9 +147,6 @@ const ContactPage = () => {
                                             onChange={e => setFormData({ ...formData, sendBrochure: e.target.checked })}
                                             className="w-5 h-5 rounded border-slate-300 text-brand-600 focus:ring-brand-500"
                                         />
-                                        <label htmlFor="sendBrochure" className="text-sm font-bold text-slate-700 dark:text-slate-300 cursor-pointer">
-                                            Send institute brochure to my email
-                                        </label>
                                     </div>
 
                                     <Button
@@ -172,6 +169,14 @@ const ContactPage = () => {
 
                         {/* Info Cards */}
                         <div className="space-y-8">
+                            {/* Contact Illustration */}
+                            <Card className="p-8 border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+                                <img
+                                    src="/illustrations/contact.svg"
+                                    alt="Contact GK Institute"
+                                    className="w-full h-40 object-contain"
+                                />
+                            </Card>
 
                             {/* New AI Chat Option */}
                             <Card className="p-8 border-l-4 border-l-purple-500 dark:bg-slate-900 border-slate-200 dark:border-slate-800 shadow-lg shadow-purple-500/10">

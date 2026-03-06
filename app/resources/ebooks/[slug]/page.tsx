@@ -30,11 +30,11 @@ const EbookLanding: React.FC = () => {
                             {/* Left: Visuals */}
                             <div className="bg-slate-100 dark:bg-slate-800 p-12 flex flex-col items-center justify-center relative overflow-hidden">
                                 <GridPattern className="opacity-50" />
-                                <div className="relative z-10 w-64 aspect-[3/4] shadow-[0_20px_50px_-12px_rgba(0,0,0,0.5)] transform rotate-[-5deg] hover:rotate-0 transition-transform duration-500 mb-8">
-                                    <CourseImage
-                                        src={cld(ebook.cover, 700)}
+                                <div className="relative z-10 w-64 aspect-[3/4] shadow-[0_20px_50px_-12px_rgba(0,0,0,0.5)] transform rotate-[-5deg] hover:rotate-0 transition-transform duration-500 mb-8 bg-white">
+                                    <img
+                                        src="/illustrations/ebook.svg"
                                         alt={ebook.title}
-                                        className="w-full h-full object-cover rounded-r-lg border-l-4 border-white/20"
+                                        className="w-full h-full object-contain rounded-r-lg border-l-4 border-white/20"
                                     />
                                 </div>
                                 <div className="relative z-10 w-full max-w-sm">

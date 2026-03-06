@@ -64,6 +64,19 @@ const ProgramDetailPage = () => {
 
     const modules = course.modules || [];
 
+    const illustrationForCourse = () => {
+        const cat = (course.category || '').toLowerCase();
+        const slug = (course.slug || '').toLowerCase();
+        if (slug.includes('ui') || slug.includes('ux')) return '/illustrations/ui-ux.svg';
+        if (slug.includes('cyber')) return '/illustrations/cyber-security.svg';
+        if (slug.includes('photography')) return '/illustrations/photography.svg';
+        if (slug.includes('video-editing') || slug.includes('youtube-video-creation')) return '/illustrations/video-editing.svg';
+        if (cat.includes('technology')) return '/illustrations/web-development.svg';
+        if (cat.includes('data')) return '/illustrations/data-science.svg';
+        if (cat.includes('digital marketing')) return '/illustrations/digital-marketing.svg';
+        return '/illustrations/web-development.svg';
+    };
+
     const getModuleDescription = (title: string) => {
         return `Build comprehensive knowledge in ${title}. This module covers essential concepts, practical techniques, and industry-standard tools.`;
     };
@@ -128,14 +141,11 @@ const ProgramDetailPage = () => {
                             </div>
                         </div>
 
-                        <div className="relative w-full max-w-md aspect-video md:aspect-square rounded-2xl overflow-hidden shadow-2xl border-4 border-white dark:border-slate-800 group z-30">
-                            <CourseImage
-                                src={course.thumbnail}
-                                alt={course.title}
-                                width={1000}
-                                height={1000}
-                                sizes="(max-width: 768px) 100vw, 40vw"
-                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        <div className="relative w-full max-w-md aspect-video md:aspect-square rounded-2xl overflow-hidden shadow-2xl border-4 border-white dark:border-slate-800 group z-30 bg-white">
+                            <img
+                                src={illustrationForCourse()}
+                                alt={`${course.title} Illustration`}
+                                className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
                             />
                         </div>
                     </div>

@@ -53,11 +53,11 @@ const BlogPost: React.FC = () => {
                     </div>
                 </div>
 
-                <div className="w-full h-64 md:h-96 rounded-2xl overflow-hidden mb-12 shadow-lg">
-                    <MediaImage
-                        src={cld(blog.image, 1200)}
+                <div className="w-full h-64 md:h-96 rounded-2xl overflow-hidden mb-12 shadow-lg bg-white">
+                    <img
+                        src="/illustrations/blog.svg"
                         alt={blog.title}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-contain"
                     />
                 </div>
 

@@ -8,15 +8,15 @@ import { ProcessFlow, GrowthChart } from '../components/Infographics';
 import { GKWebtechPromo } from '../components/GKWebtechPromo';
 import { HOMEPAGE_STATS, HOW_IT_WORKS_STEPS } from '../constants';
 import { COURSES } from '../data/courses';
-import { cld, FALLBACK_COURSE_IMAGE } from '@/lib/cloudinary';
+import { cld } from '@/lib/cloudinary';
 import { partnerLogos } from '@/data/logos';
 import { SITE_CONFIG } from '@/data/site';
 import Logo from '@/components/ui/Logo';
-import CourseImage from '@/components/ui/CourseImage';
 import MediaImage from '@/components/ui/MediaImage';
 import { GKCertificate } from '../components/GKCertificate';
 import AnnouncementCarousel from '../components/AnnouncementCarousel';
 import AnimatedFeatureIcons from '../components/AnimatedFeatureIcons';
+import CourseCard from '../components/CourseCard';
 
 const DOMAIN_CARDS = [
     {
@@ -603,75 +603,7 @@ const LandingPage = () => {
 
                         <div className="grid md:grid-cols-3 gap-8 animate-fade-in relative z-30">
                             {displayedCourses.map((course, idx) => (
-                                <Card
-                                    key={course.id}
-                                    variant="poster"
-                                    index={idx}
-                                    className="flex flex-col h-full cursor-pointer group transition-all duration-500 hover:-translate-y-2 bg-white dark:bg-slate-900 z-30 relative shadow-premium hover:shadow-2xl border border-slate-200 dark:border-slate-800 hover:border-[#1F4037] dark:hover:border-slate-600"
-                                    onClick={() => router.push(`/courses/${course.slug}`)}
-                                >
-                                    <div className="h-56 bg-slate-900 relative overflow-hidden flex items-center justify-center">
-                                        <CourseImage
-                                            src={course.thumbnail}
-                                            alt={course.title}
-                                            width={900}
-                                            height={506}
-                                            sizes="(max-width: 768px) 100vw, 33vw"
-                                            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-50"
-                                        />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
-
-                                        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                            <div className="w-14 h-14 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white border border-white/30 transform scale-75 group-hover:scale-100 transition-transform">
-                                                <Icons.Play />
-                                            </div>
-                                        </div>
-
-                                        <div className="absolute top-4 left-4">
-                                            <Badge variant="limited" className="bg-[#1F4037] text-white font-black px-3 py-1 uppercase text-[10px] tracking-widest">{course.category}</Badge>
-                                        </div>
-
-                                        <div className="absolute top-4 right-4">
-                                            {course.programType === 'pro' && <Badge variant="limited">PRO</Badge>}
-                                        </div>
-
-                                        <div className="absolute bottom-4 left-4 right-4 text-left">
-                                            <h3 className="text-xl font-black text-white mb-1 leading-tight shadow-sm">{course.title}</h3>
-                                            <div className="flex items-center gap-2 text-xs text-slate-300 font-bold uppercase tracking-wider">
-                                                <span>{course.duration}</span>
-                                                <span className="w-1 h-1 bg-slate-400 rounded-full"></span>
-                                                <span>Project Based</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="p-6 flex-1 flex flex-col bg-white dark:bg-slate-900 relative z-30">
-                                        <p className="text-sm text-slate-500 dark:text-slate-400 mb-6 line-clamp-2 leading-relaxed font-medium">
-                                            {course.description || "Master professional skills with our industry-led certification programs."}
-                                        </p>
-
-                                        <div className="space-y-3 mb-8">
-                                            {(course.keyFeatures || []).slice(0, 3).map((feat, i) => (
-                                                <div key={i} className="flex items-start gap-3 text-xs text-slate-600 dark:text-slate-300 font-bold">
-                                                    <div className="w-4 h-4 rounded-full bg-slate-100 dark:bg-slate-800 text-[#1F4037] dark:text-emerald-500 flex items-center justify-center flex-shrink-0 mt-0.5"><Icons.Check /></div>
-                                                    <span className="leading-snug">{feat}</span>
-                                                </div>
-                                            ))}
-                                        </div>
-
-                                        <div className="mt-auto pt-5 border-t border-slate-100 dark:border-slate-800">
-                                            <Button
-                                                variant="marigold"
-                                                className="w-full shadow-lg"
-                                                onClick={(e) => {
-                                                    e.stopPropagation();
-                                                    router.push('/contact');
-                                                }}
-                                            >
-                                                Contact for Pricing
-                                            </Button>
-                                        </div>
-                                    </div>
-                                </Card>
+                                <CourseCard key={course.id} course={course} index={idx} />
                             ))}
                         </div>
 
@@ -822,9 +754,9 @@ const LandingPage = () => {
                             <div className="absolute -inset-4 bg-slate-100 dark:bg-slate-800 rounded-3xl blur-2xl transition-all duration-700"></div>
                             <div className="relative rounded-3xl overflow-hidden border-2 border-slate-100 dark:border-slate-800 shadow-2xl">
                                 <img
-                                    src={cld("promotions/gkwebtech-hero", 800)}
+                                    src="/images/practical_learning_mentor.png"
                                     alt="About GK Institute"
-                                    className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
+                                    className="w-full h-[400px] object-cover transform transition-transform duration-700 group-hover:scale-105"
                                 />
                             </div>
                         </div>

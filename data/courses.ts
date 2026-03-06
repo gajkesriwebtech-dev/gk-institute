@@ -1413,160 +1413,116 @@ export const FULL_PROGRAM_CATALOG: Program[] = [
         ],
         keyFeatures: ["Ready Assets", "Hotkey Sheets", "Asset Library"]
     },
-    {
-        id: "digital-career-launch-master",
-        slug: "comprehensive-digital-career-launch-program",
-        programType: 'master',
-        title: "Comprehensive Digital Career Launch Program",
-        category: "Foundational & Career Skills",
-        description: "The ultimate career elevator. A 6-month intensive designed to transform you into a professional multi-skill digital executive.",
-        duration: "6 Months",
-        thumbnail: cld("courses/industry-expert", 600),
-        price: 50000,
-        originalPrice: 75000,
-        highlights: [
-            "Career Engineering",
-            "Technical Foundations",
-            "Industrial Portfolio",
-            "Live Internship Cycle",
-            "Elite Placement Prep"
-        ],
-        modules: [
-            { title: "Module 1: Career Planning & Goal Setting", topics: ["Niche audit", "Roadmap design", "Mental models"] },
-            { title: "Module 2: Communication & Soft Skills", topics: ["Corporate speech", "Leadership", "EQ basics"] },
-            { title: "Module 3: Technical Foundation Selection", topics: ["Core skill deep-dive", "Tool mastery", "Logic building"] },
-            { title: "Module 4: Portfolio Development", topics: ["Case studies", "Personal brand", "LinkedIn engine"] },
-            { title: "Module 5: Internship & Live Projects", topics: ["Workplace sim", "Real client tasks", "Performance review"] },
-            { title: "Module 6: Placement Preparation", topics: ["Elite networking", "Mock panel tests", "Closing the offer"] }
-        ],
-        jobRoles: ["Entry-Level Professional", "Corporate Associate", "Multi-Skill Digital Executive"],
-        outcomes: [
-            { id: 1, title: "Career Multiplier", description: "Launch your career with a massive multi-skill professional advantage." },
-            { id: 2, title: "Soft Skill Lead", description: "Master the communication and leadership required for elite roles." },
-            { id: 3, title: "Tech Foundation", description: "Possess professional-grade command of modern digital tools." },
-            { id: 4, title: "Portfolio Pro", description: "Exhibit a stunning industrial portfolio that wins top-tier offers." },
-            { id: 5, title: "Interview Master", description: "Command the room in any high-stakes professional interview." },
-            { id: 6, title: "Executive Ready", description: "Transition seamlessly from student to high-value corporate associate." }
-        ],
-        keyFeatures: ["Mentor Access", "Job Guarantee Lab", "Live Internships"]
-    },
-    {
-        id: "drone-pilot-training-pro",
-        slug: "drone-pilot-training",
-        programType: 'pro',
-        title: "Drone Pilot Training",
-        category: "Media & Production",
-        description: "Master the art and science of UAV flight. From regulatory compliance and flight safety to advanced aerial cinematography and mapping.",
-        duration: "3 Months",
-        thumbnail: cld("courses/drone-pilot-training", 600),
-        price: 25000,
-        originalPrice: 35000,
-        highlights: [
-            "DGCA Guidelines & Laws",
-            "Flight Simulator Training",
-            "Aerial Photography Mastery",
-            "Drone Assembly & Maintenance",
-            "Professional Certification"
-        ],
-        modules: [
-            { title: "Module 1: Introduction to UAVs & Regulations", topics: ["History of drones", "DGCA rules & categories", "Airspace mapping", "Safety protocols"] },
-            { title: "Module 2: Flight Principles & Aerodynamics", topics: ["How drones fly", "Weather considerations", "Battery management", "Signal & frequencies"] },
-            { title: "Module 3: Simulator Training & Controls", topics: ["Controller mastery", "Stable hover and takeoff", "Emergency maneuvers", "Virtual flight labs"] },
-            { title: "Module 4: Real-world Flight Operations", topics: ["Pre-flight checklists", "Safe landing techniques", "Obstacle avoidance", "Night flying basics"] },
-            { title: "Module 5: Aerial Cinematography & Surveying", topics: ["Gimbal movements", "Composition & framing", "Mapping software", "Data processing"] },
-            { title: "Module 6: Maintenance & Troubleshooting", topics: ["Motor & ESC care", "Firmware updates", "Repairing minor damage", "System diagnostics"] }
-        ],
-        jobRoles: ["Licensed Drone Pilot", "Aerial Photographer", "UAV Surveyor", "Drone Technician"],
-        outcomes: [
-            { id: 1, title: "DGCA Compliance", description: "Navigate Indian drone regulations and licensing requirements with ease." },
-            { id: 2, title: "Flight Mastery", description: "Command multi-rotor UAVs with professional precision and safety." },
-            { id: 3, title: "Cinematic Shots", description: "Capture stunning aerial footage for films, ads, and real estate." },
-            { id: 4, title: "Technical Skills", description: "Assemble and maintain enterprise-grade drone systems." },
-            { id: 5, title: "Surveying Expertise", description: "Perform industrial inspections and terrain mapping using drones." },
-            { id: 6, title: "Crisis Management", description: "Handle emergency flight scenarios and system failures effectively." }
-        ],
-        keyFeatures: ["Simulator Labs", "Live Flight Training", "Job Placement"]
-    },
-    {
-        id: "podcast-mastery-pro",
-        slug: "podcast-mastery",
-        programType: 'pro',
-        title: "Podcast Mastery",
-        category: "Media & Production",
-        description: "Launch, grow, and monetize your voice. Master storytelling, professional audio editing, and audience distribution strategies.",
-        duration: "3 Months",
-        thumbnail: cld("courses/podcast-mastery", 600),
-        price: 15000,
-        originalPrice: 25000,
-        highlights: [
-            "Scripting & Storytelling",
-            "Audio Engineering (Audacity/DAW)",
-            "Guest Interview Techniques",
-            "Monetization & Sponsorships",
-            "Global Distribution (Spotify/Apple)"
-        ],
-        modules: [
-            { title: "Module 1: Concept & Niche Selection", topics: ["Finding your topic", "Target audience profiling", "Competitive analysis", "Naming & Branding"] },
-            { title: "Module 2: Content Planning & Scripting", topics: ["Storyboarding", "Interviewing skills", "Solo episode structure", "Writing for the ear"] },
-            { title: "Module 3: Gear & Studio Setup", topics: ["Microphone selection", "Acoustic treatment", "Recording software", "Remote recording tools"] },
-            { title: "Module 4: Audio Editing & Production", topics: ["Noise reduction", "Leveling & compression", "Adding intro/outro music", "Sound design"] },
-            { title: "Module 5: Hosting & Distribution", topics: ["RSS feeds", "Spotify/Apple Podcasts", "Podcast SEO", "Analytics tracking"] },
-            { title: "Module 6: Marketing & Monetization", topics: ["Social media growth", "Affiliate marketing", "Direct sponsorships", "Community building"] }
-        ],
-        jobRoles: ["Podcast Producer", "Audio Engineer", "Content Strategist", "Voice-over Artist"],
-        outcomes: [
-            { id: 1, title: "Pro Audio Quality", description: "Produce crystal-clear audio that rivals professional studios." },
-            { id: 2, title: "Storytelling Skills", description: "Craft compelling narratives that keep listeners engaged for hours." },
-            { id: 3, title: "Technical Authority", description: "Master the tools and platforms required to run a global podcast." },
-            { id: 4, title: "Revenue Generation", description: "Implement multiple streams of income from your content." },
-            { id: 5, title: "Brand Influence", description: "Build a loyal audience and establish yourself as an industry expert." },
-            { id: 6, title: "Networking Growth", description: "Connect with high-value guests and build powerful professional links." }
-        ],
-        keyFeatures: ["Studio Access", "Editing Labs", "Monetization Blueprint"]
-    },
-    {
-        id: "jewellery-designing-pro",
-        slug: "jewellery-designing",
-        programType: 'pro',
-        title: "Jewellery Designing",
-        category: "Creative & Design",
-        description: "Bridge tradition and technology. Master traditional jewellery sketching, diamond grading, and advanced 3D CAD modeling.",
-        duration: "4 Months",
-        thumbnail: cld("courses/jewellery-design-pro", 600),
-        price: 30000,
-        originalPrice: 45000,
-        highlights: [
-            "Hand Sketching & Illustration",
-            "CAD/CAM (Rhino/Matrix)",
-            "Gemology & Diamond Grading",
-            "Manufacturing Processes",
-            "Retail Management Basics"
-        ],
-        modules: [
-            { title: "Module 1: Design History & Fundamentals", topics: ["History of jewellery", "Metals & alloys", "Design principles", "Trend analysis"] },
-            { title: "Module 2: Traditional Hand Illustration", topics: ["Drafting techniques", "Rendering gold/silver", "Gemstone painting", "Portfolio sketching"] },
-            { title: "Module 3: Gemology & Diamond Grading", topics: ["Types of stones", "The 4 Cs of diamonds", "Stone setting styles", "Testing tools"] },
-            { title: "Module 4: Digital Design (CAD)", topics: ["Rhino basics", "3D modeling", "Ring & pendant construction", "Technical drawing"] },
-            { title: "Module 5: Manufacturing & Casting", topics: ["Wax carving", "Lost-wax casting", "Finishing & polishing", "Hallmarking"] },
-            { title: "Module 6: Branding & Collections", topics: ["Developing a line", "Pricing strategies", "Marketing luxury items", "Design competitions"] }
-        ],
-        jobRoles: ["Jewellery Designer", "CAD Modeler", "Gemologist Assistant", "Product Developer"],
-        outcomes: [
-            { id: 1, title: "Master Sketching", description: "Produce stunning hand-drawn designs for custom client commissions." },
-            { id: 2, title: "3D CAD Proficiency", description: "Create production-ready 3D models for casting and printing." },
-            { id: 3, title: "Gem Expertise", description: "Identify and evaluate precious stones and diamonds with confidence." },
-            { id: 4, title: "Production Knowledge", description: "Understand the entire journey from design to the final retail piece." },
-            { id: 5, title: "Brand Identity", description: "Create a unique design signature and launch your own collection." },
-            { id: 6, title: "Luxury Marketing", description: "Master the art of high-end sales and boutique retail management." }
-        ],
-        keyFeatures: ["CAD Licenses", "Sketching Labs", "Industry Workshops"]
-    }
 ];
 
-export const COURSES: UnifiedCourse[] = FULL_PROGRAM_CATALOG.map(program => ({
-    ...program,
-    slug: program.slug ?? program.id,
-    overview: program.description,
-    modules: program.modules ?? [],
-    brochurePdf: (program as any).brochurePdf ?? "",
-}));
+function hashSig(str: string): number {
+    let h = 0;
+    for (let i = 0; i < str.length; i++) h = (h * 31 + str.charCodeAt(i)) >>> 0;
+    return h % 1000;
+}
+
+function getStockImage(program: Program): string {
+    const t = (program.title || "").toLowerCase();
+    const s = (program.slug || program.id || "").toLowerCase();
+    const c = (program.category || "").toLowerCase();
+    const lvl = program.programType;
+    const sig = hashSig(s + lvl);
+    const base = "https://source.unsplash.com/featured/800x450";
+    if (s.includes("mern") || t.includes("full stack") || t.includes("web")) return `${base}?coding,programming,laptop&sig=${sig}`;
+    if (s.includes("ui") || s.includes("ux") || t.includes("ui") || t.includes("ux")) return `${base}?ui,wireframe,design&sig=${sig}`;
+    if (s.includes("wordpress")) return `${base}?wordpress,website,cms&sig=${sig}`;
+    if (s.includes("java")) return `${base}?java,code,backend&sig=${sig}`;
+    if (s.includes("oracle")) return `${base}?database,server,oracle&sig=${sig}`;
+    if (s.includes("n8n") || t.includes("automation")) return `${base}?automation,workflow,robotics&sig=${sig}`;
+    if (s.includes("prompt")) return `${base}?ai,prompt,neural&sig=${sig}`;
+    if (s.includes("youtube") && t.includes("script")) return `${base}?writing,creator,youtube&sig=${sig}`;
+    if (s.includes("photography") || t.includes("photography")) return `${base}?camera,photography,studio&sig=${sig}`;
+    if (s.includes("game") || s.includes("app")) return `${base}?game,unity,code&sig=${sig}`;
+    if (s.includes("ai-tools") || c.includes("ai & automation")) return `${base}?ai,automation,office&sig=${sig}`;
+    if (s.includes("dropshipping") || s.includes("e-commerce")) return `${base}?ecommerce,shop,store&sig=${sig}`;
+    if (s === "drone-pilot-training" && lvl === "foundation") return `${base}?drone,flight,training&sig=${sig}`;
+    if (s === "drone-pilot-training" && lvl === "pro") return `${base}?drone,aerial,cinematography&sig=${sig}`;
+    if (s.includes("youtube-video-creation")) return `${base}?youtube,editing,studio&sig=${sig}`;
+    if (s.includes("graphic-design") || t.includes("graphic")) return `${base}?design,adobe,workspace&sig=${sig}`;
+    if (s.includes("video-editing-advanced") || (t.includes("video editing") && lvl === "pro")) return `${base}?video,editing,timeline&sig=${sig}`;
+    if (s.includes("video-editing-short-term") || (t.includes("video editing") && lvl === "foundation")) return `${base}?video,editing,beginner&sig=${sig}`;
+    if (s.includes("data-science") || t.includes("data")) return `${base}?data,analytics,dashboard&sig=${sig}`;
+    if (s.includes("digital-marketing") || c.includes("digital marketing")) return `${base}?marketing,analytics,seoj&sig=${sig}`;
+    if (s.includes("software-testing")) return `${base}?testing,qa,automation&sig=${sig}`;
+    if (s.includes("business-analytics")) return `${base}?business,analytics,charts&sig=${sig}`;
+    if (s.includes("stock-market")) return `${base}?stock,market,trading&sig=${sig}`;
+    if (s.includes("affiliate-marketing")) return `${base}?affiliate,marketing,ads&sig=${sig}`;
+    if (s.includes("tally")) return `${base}?accounting,finance,ledger&sig=${sig}`;
+    if (s.includes("personality") || t.includes("interview")) return `${base}?interview,professional,career&sig=${sig}`;
+    if (s.includes("english")) return `${base}?english,book,learning&sig=${sig}`;
+    if (s.includes("comprehensive-banking") || s.includes("complete-banking")) return `${base}?banking,finance,branch&sig=${sig}`;
+    if (s.includes("ar-vr")) return `${base}?vr,ar,headset&sig=${sig}`;
+    if (s.includes("cyber") || t.includes("cyber")) return `${base}?cybersecurity,code,hacker&sig=${sig}`;
+    if (s.includes("content-creation")) return `${base}?content,creator,studio&sig=${sig}`;
+    if (s.includes("instagram")) return `${base}?instagram,reels,phone&sig=${sig}`;
+    if (s.includes("mobile-photography")) return `${base}?mobile,photography,phone&sig=${sig}`;
+    if (s.includes("drawing") || s.includes("sketching")) return `${base}?drawing,sketch,art&sig=${sig}`;
+    if (s.includes("basic-computer")) return `${base}?computer,office,workspace&sig=${sig}`;
+    if (s.includes("microsoft-excel") || s.includes("excel")) return `${base}?excel,spreadsheet,charts&sig=${sig}`;
+    if (s.includes("career-launch")) return `${base}?career,launch,mentor&sig=${sig}`;
+    if (s.includes("podcast")) return `${base}?podcast,microphone,studio&sig=${sig}`;
+    if (s.includes("jewellery-designing")) return `${base}?jewellery,design,cad&sig=${sig}`;
+    if (s.includes("jewellery-design")) return `${base}?jewelry,artisan,workbench&sig=${sig}`;
+    return `${base}?coding,workspace&sig=${sig}`;
+}
+
+const CURATED_IMAGES: Record<string, string> = {
+    "mern-stack-mastery": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80",
+    "ui-and-ux-designing": "https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1200&q=80",
+    "wordpress-development": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "java-programming": "https://images.unsplash.com/photo-1488590528505-98f1a5e5f4cd?auto=format&fit=crop&w=1200&q=80",
+    "oracle-certified-professional": "https://logo.clearbit.com/oracle.com",
+    "n8n-smart-automation": "https://logo.clearbit.com/n8n.io",
+    "prompt-engineering": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=80",
+    "youtube-script-writing": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1200&q=80",
+    "photography-skills": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
+    "code-to-play-game-and-app-development": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=1200&q=80",
+    "ai-tools-for-office-and-business": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80&v=office",
+    "smart-dropshipping-mastery": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
+    "drone-pilot-training": "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1200&q=80",
+    "youtube-video-creation": "https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=1200&q=80&v=yt",
+    "graphic-design": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1200&q=80&v=gd",
+    "video-editing-advanced": "https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=1200&q=80&v=ve-adv",
+    "data-science": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80&v=ds",
+    "digital-marketing-techniques": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80",
+    "software-testing-manual-and-basic-automation": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80&v=qa",
+    "business-analytics": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80",
+    "stock-market-and-financial-trading": "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80",
+    "affiliate-marketing": "/logos/amazon.svg?v=aff",
+    "tally-with-gst": "https://images.unsplash.com/photo-1554224155-8d1d963aa417?auto=format&fit=crop&w=1200&q=80",
+    "personality-development-and-interview-skills": "https://images.unsplash.com/photo-1527198511255-7cbd6f0f2bb0?auto=format&fit=crop&w=1200&q=80",
+    "english-for-banking": "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80",
+    "comprehensive-banking-course": "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=1200&q=80",
+    "ar-and-vr-development": "https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=1200&q=80",
+    "ai-for-cyber-safety-and-digital-investigation": "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=1200&q=80",
+    "content-creation-mastery": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1200&q=80&v=content",
+    "instagram-reel-creation": "/logos/meta.svg?v=insta",
+    "mobile-photography": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80&v=mobile",
+    "drawing-and-sketching": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1200&q=80&v=sketch",
+    "basic-computer-skills": "/logos/microsoft.svg?v=basic",
+    "proficiency-in-microsoft-excel": "/logos/microsoft.svg?v=excel",
+    "e-commerce-and-dropshipping": "/logos/shopify.svg?v=commerce",
+    "video-editing-short-term-basic": "https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=1200&q=80&v=ve-basic",
+    "comprehensive-digital-career-launch-program": "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80&v=career",
+    "podcast-mastery": "https://images.unsplash.com/photo-1541639938591-31026514c3d0?auto=format&fit=crop&w=1200&q=80",
+    "jewellery-design": "https://images.unsplash.com/photo-1516632664305-eda5d4fdbb57?auto=format&fit=crop&w=1200&q=80",
+    "jewellery-designing": "https://images.unsplash.com/photo-1516632664305-eda5d4fdbb57?auto=format&fit=crop&w=1200&q=80&v=pro",
+};
+export const COURSES: UnifiedCourse[] = FULL_PROGRAM_CATALOG.map(program => {
+    const curated = CURATED_IMAGES[program.slug || program.id] || "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80&v=default";
+    const image = curated;
+    return {
+        ...program,
+        slug: program.slug ?? program.id,
+        overview: program.description,
+        modules: program.modules ?? [],
+        brochurePdf: (program as any).brochurePdf ?? "",
+        image,
+        thumbnail: curated,
+    };
+});

@@ -83,7 +83,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     id: "team_005",
     slug: "harsimran-kaur",
     fullName: "Harsimran Kaur",
-    role: "Manager - Counselling",
+    role: "Manager - Counselor",
     department: "Counselling",
     bio: "Drives student success through personalized guidance, career planning, and outcome-focused support.",
     avatarUrl: cld("gkinstitute/team/product-lead", 400),

@@ -58,15 +58,11 @@ export const GKWebtechPromo: React.FC = () => {
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 group">
               <div className="absolute inset-0 bg-brand-900/10 mix-blend-overlay z-10"></div>
               <img
-                src={cld("promotions/gkwebtech-hero", 900)}
-                alt="GKWebtech Team Analysis"
-                className="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105 opacity-90 grayscale-[20%] group-hover:grayscale-0"
+                src="/images/gkwebtech_agency_team.png"
+                alt="GKWebtech Professional Team"
+                className="w-full h-[400px] object-cover transform transition-transform duration-700 group-hover:scale-105"
                 loading="lazy"
                 decoding="async"
-                onError={(e) => {
-                  e.currentTarget.onerror = null;
-                  e.currentTarget.src = FALLBACK_COURSE_IMAGE;
-                }}
               />
 
               {/* Floating "Robot/Tech" Mascot Card */}

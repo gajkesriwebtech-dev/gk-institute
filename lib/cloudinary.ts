@@ -1,6 +1,6 @@
 
 const CLOUD_NAME = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME || 'dnzbwokjy';
-export const FALLBACK_COURSE_IMAGE = `https://res.cloudinary.com/${CLOUD_NAME}/image/upload/f_auto,q_auto,c_fill,w_800,h_450/gkinstitute/fallback-course`;
+export const FALLBACK_COURSE_IMAGE = `/images/course-placeholder.svg`;
 
 /**
  * Standardized Cloudinary image loading helper.

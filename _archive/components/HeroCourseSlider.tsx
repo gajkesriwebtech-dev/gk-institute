@@ -2,9 +2,9 @@
 
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
-import { FULL_PROGRAM_CATALOG } from '../data/courses';
-import { Icons, Badge, Button } from './ui';
-import CourseImage from './ui/CourseImage';
+import { FULL_PROGRAM_CATALOG } from '../data/courses.data';
+import { Icons, Badge, Button } from '../../components/ui';
+import CourseImage from '../../components/ui/CourseImage';
 
 const HeroCourseSlider = () => {
     const router = useRouter();
@@ -14,7 +14,7 @@ const HeroCourseSlider = () => {
 
     // Select specialized hero featured courses
     const featuredCourses = FULL_PROGRAM_CATALOG.filter(c =>
-        ['ui-ux-design', 'digital-marketing', 'mern-stack-development', 'interior-design', 'n8n-automation'].includes(c.id)
+        ['ui-ux-designing-pro', 'digital-marketing-mastery', 'mern-stack-mastery', 'n8n-smart-automation', 'graphic-design-pro'].includes(c.id)
     ).slice(0, 5);
 
     useEffect(() => {

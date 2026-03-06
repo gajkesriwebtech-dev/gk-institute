@@ -10,91 +10,8 @@ import { cld } from '@/lib/cloudinary';
 import { COURSES } from '../../data/courses';
 import type { Course } from '../../data/courses';
 import MentorshipSection from '../../components/MentorshipSection';
-import CourseImage from '@/components/ui/CourseImage';
+import CourseCard from '../../components/CourseCard';
 
-const CourseCard: React.FC<{ course: Course; index: number }> = ({ course, index }) => {
-    const router = useRouter();
-
-    // Reverted highlights logic: Use the original course highlights
-    const displayHighlights = course.highlights.slice(0, 6);
-
-    return (
-        <Card
-            variant="poster"
-            index={index}
-            className="flex flex-col h-full group cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl z-30 bg-white dark:bg-slate-900 border-2 border-brand-200 dark:border-brand-900 shadow-premium hover:border-brand-600"
-            onClick={() => router.push(`/courses/${course.slug}`)}
-        >
-            <div className="h-52 relative overflow-hidden rounded-t-2xl">
-                <CourseImage
-                    src={course.thumbnail}
-                    alt={course.title}
-                    width={900}
-                    height={506}
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
-                <div className="absolute top-4 left-4">
-                    <Badge variant="default" className="bg-brand-600/90 text-white border-none backdrop-blur-md">
-                        {course.category}
-                    </Badge>
-                </div>
-            </div>
-
-            <div className="p-6 flex-1 flex flex-col">
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 leading-tight group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
-                    {course.title}
-                </h3>
-
-                <div className="flex items-center gap-2 text-[10px] text-slate-400 dark:text-slate-500 font-black uppercase tracking-[0.15em] mb-4">
-                    <Icons.Clock className="w-3.5 h-3.5" />
-                    <span>{course.duration}</span>
-                    <span className="w-1 h-1 bg-slate-300 dark:bg-slate-700 rounded-full"></span>
-                    <span>Project Based</span>
-                </div>
-
-                {/* Highlights List */}
-                <ul className="space-y-2 mb-6 flex-1">
-                    {displayHighlights.slice(0, 6).map((highlight: string, i: number) => (
-                        <li key={i} className="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
-                            <Icons.Check className="w-4 h-4 text-secondary-500 mt-0.5 shrink-0" />
-                            <span className="line-clamp-1">{highlight}</span>
-                        </li>
-                    ))}
-                </ul>
-
-                <div className="mt-auto">
-                    {/* Actions */}
-                    <div className="grid grid-cols-2 gap-3">
-                        <Button
-                            variant="outline"
-                            size="sm"
-                            className="w-full text-xs font-bold"
-                            onClick={(e) => {
-                                e.stopPropagation();
-                                router.push(`/courses/${course.slug}`);
-                            }}
-                        >
-                            View Details
-                        </Button>
-                        <Button
-                            variant="primary"
-                            size="sm"
-                            className="w-full text-xs font-bold bg-brand-600 hover:bg-brand-700 text-white border-none shadow-premium transition-all hover:scale-[1.02]"
-                            onClick={(e) => {
-                                e.stopPropagation();
-                                router.push('/contact');
-                            }}
-                        >
-                            Contact for Pricing
-                        </Button>
-                    </div>
-                </div>
-            </div>
-        </Card>
-    );
-};
 
 // BROAD CATEGORY DEFINITIONS
 const CATEGORIES = [
@@ -159,11 +76,9 @@ const CoursesPage: React.FC = () => {
                         <div className="relative">
                             <div className="absolute top-0 right-0 w-64 h-64 bg-secondary-400/20 rounded-full blur-3xl -z-10"></div>
                             <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -z-10"></div>
-                            <CourseImage
-                                src={cld("courses/hero-learning", 900)}
-                                alt="Students learning"
-                                width={900}
-                                height={600}
+                            <img
+                                src="/illustrations/web-development.svg"
+                                alt="Learning Illustration"
                                 className="rounded-2xl shadow-2xl border-4 border-white/20 dark:border-slate-800 rotate-2 hover:rotate-0 transition-transform duration-500"
                             />
                         </div>
