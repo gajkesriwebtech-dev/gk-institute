@@ -1,10 +1,10 @@
-"use client";
+﻿"use client";
 
 import React, { Suspense, useEffect, useMemo, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { PublicLayout } from "@/components/Layouts";
 import { Button, Card } from "@/components/ui";
-import { FULL_PROGRAM_CATALOG } from "@/data/courses.data";
+import { FULL_PROGRAM_CATALOG } from "@/data/courses";
 import { getBasePrice } from "@/lib/coursePricing";
 
 type PaymentMethod = "stripe" | "offline";
@@ -14,7 +14,7 @@ const PROMO_CODES: Record<string, number> = {
   GK20: 20
 };
 
-// Inner component that uses useSearchParams — must be wrapped in Suspense
+// Inner component that uses useSearchParams â€” must be wrapped in Suspense
 function PlanLearningContent() {
   const router = useRouter();
   const searchParams = useSearchParams();

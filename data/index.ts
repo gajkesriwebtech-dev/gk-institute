@@ -1,4 +1,4 @@
-export * from "./courses.data";
+export * from "./courses";
 export * from "./resourceData";
 export * from "./team";
 export * from "./testimonials";

@@ -1,4 +1,4 @@
-
+﻿
 export interface CoursePricingConfig {
     baseDuration: number;
     durations: {
@@ -378,7 +378,7 @@ export const COURSE_PRICING: Record<string, CoursePricingConfig> = {
     "smart-dropshipping-mastery": { baseDuration: 4, durations: { 4: 28000 }, hardwareRequired: false, addOns: {} }
 };
 
-import { FULL_PROGRAM_CATALOG } from '@/data/courses.data';
+import { FULL_PROGRAM_CATALOG } from '@/data/courses';
 
 /**
  * Helper to get the base price (for the base duration) of a course.

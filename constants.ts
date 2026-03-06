@@ -1,7 +1,7 @@
-
+﻿
 import { Course, Task, Roadmap, Program } from './types';
 import { BLOGS, LESSONS, EBOOKS, MicroLesson, Ebook, BlogPost } from './data/resourceData';
-import { FULL_PROGRAM_CATALOG } from './data/courses.data';
+import { FULL_PROGRAM_CATALOG } from './data/courses';
 
 
 export const NAVBAR_LINKS = [

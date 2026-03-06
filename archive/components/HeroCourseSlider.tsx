@@ -1,8 +1,8 @@
-"use client";
+﻿"use client";
 
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
-import { FULL_PROGRAM_CATALOG } from '../data/courses.data';
+import { FULL_PROGRAM_CATALOG } from '../data/courses';
 import { Icons, Badge, Button } from './ui';
 import CourseImage from './ui/CourseImage';
 

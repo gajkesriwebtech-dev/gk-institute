@@ -1,4 +1,4 @@
-﻿import { Program, UnifiedCourse } from "@/types";
+﻿import { UnifiedCourse, Program, CourseModule } from "@/types";
 import { cld } from "@/lib/cloudinary";
 
 /**
@@ -6,6 +6,7 @@ import { cld } from "@/lib/cloudinary";
  */
 export interface Course extends UnifiedCourse { }
 
+export const FULL_PROGRAM_CATALOG: Program[] = [
 export const FULL_PROGRAM_CATALOG: Program[] = [
     {
         id: "mern-stack-mastery",

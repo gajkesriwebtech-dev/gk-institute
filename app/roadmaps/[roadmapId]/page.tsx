@@ -6,7 +6,7 @@ import { PublicLayout } from '../../../components/Layouts';
 import { Button, Card, Badge, Icons } from '../../../components/ui';
 import { RoadmapCanvas } from '../../../components/RoadmapCanvas';
 import { MOCK_ROADMAPS } from '../../../constants';
-import { FULL_PROGRAM_CATALOG } from '../../../data/courses.data';
+import { FULL_PROGRAM_CATALOG } from '../../../data/courses';
 import { cld, FALLBACK_COURSE_IMAGE } from '../../../lib/cloudinary';
 import CourseImage from '@/components/ui/CourseImage';
 
