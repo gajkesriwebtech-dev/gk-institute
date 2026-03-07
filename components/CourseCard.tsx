@@ -1,8 +1,22 @@
 "use client";
 
-import React from 'react';
+import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { Card, Button, Badge, Icons } from '@/components/ui';
+import { Card, Button, Badge } from '@/components/ui';
+import {
+    Code,
+    BarChart,
+    PenTool,
+    Shield,
+    Camera,
+    Film,
+    LineChart,
+    Cloud,
+    Database,
+    Clock,
+    ChevronRight
+} from 'lucide-react';
+import { BrochureModal } from '@/components/BrochureModal';
 import type { Course } from '@/data/courses';
 
 interface CourseCardProps {
@@ -12,108 +26,102 @@ interface CourseCardProps {
 
 const CourseCard: React.FC<CourseCardProps> = ({ course, index }) => {
     const router = useRouter();
+    const [isBrochureModalOpen, setIsBrochureModalOpen] = useState(false);
 
-    const displayHighlights = course.highlights ? course.highlights.slice(0, 6) : [];
-
-    const iconForCourse = () => {
+    const getIcon = () => {
         const cat = (course.category || '').toLowerCase();
-        const slug = (course.slug || '').toLowerCase();
-        if (cat.includes('technology')) return <Icons.Code className="w-7 h-7" />;
-        if (cat.includes('ai') || slug.includes('ai')) return <Icons.Settings className="w-7 h-7" />;
-        if (cat.includes('data')) return <Icons.Database className="w-7 h-7" />;
-        if (cat.includes('digital marketing')) return <Icons.Globe className="w-7 h-7" />;
-        if (cat.includes('finance')) return <Icons.Award className="w-7 h-7" />;
-        if (cat.includes('media')) return <Icons.PlayCircle className="w-7 h-7" />;
-        if (cat.includes('creative')) return <Icons.BookOpen className="w-7 h-7" />;
-        if (cat.includes('foundational')) return <Icons.Calendar className="w-7 h-7" />;
-        return <Icons.Code className="w-7 h-7" />;
+        const iconSize = 14;
+
+        if (cat.includes('technology') || cat.includes('development')) return <Code size={iconSize} />;
+        if (cat.includes('digital marketing')) return <BarChart size={iconSize} />;
+        if (cat.includes('creative') || cat.includes('design') || cat.includes('graphic')) return <PenTool size={iconSize} />;
+        if (cat.includes('cyber security')) return <Shield size={iconSize} />;
+        if (cat.includes('photography')) return <Camera size={iconSize} />;
+        if (cat.includes('video editing')) return <Film size={iconSize} />;
+        if (cat.includes('data') || cat.includes('analytics')) return <LineChart size={iconSize} />;
+        if (cat.includes('cloud computing')) return <Cloud size={iconSize} />;
+        if (cat.includes('database')) return <Database size={iconSize} />;
+
+        return <Code size={iconSize} />;
     };
 
-    const gradientForCourse = () => {
-        const cat = (course.category || '').toLowerCase();
-        if (cat.includes('technology')) return 'from-indigo-500 to-purple-600';
-        if (cat.includes('ai')) return 'from-blue-500 to-cyan-500';
-        if (cat.includes('data')) return 'from-emerald-500 to-teal-500';
-        if (cat.includes('digital marketing')) return 'from-orange-500 to-red-500';
-        if (cat.includes('finance')) return 'from-amber-500 to-yellow-600';
-        if (cat.includes('media')) return 'from-pink-500 to-fuchsia-600';
-        if (cat.includes('creative')) return 'from-violet-500 to-indigo-600';
-        return 'from-slate-500 to-slate-700';
+    const getLevel = () => {
+        switch (course.programType) {
+            case 'foundation': return 'Beginner Friendly';
+            case 'pro': return 'Intermediate';
+            case 'master': return 'Advanced';
+            default: return 'All Levels';
+        }
     };
 
     return (
-        <Card
-            variant="poster"
-            index={index}
-            className="flex flex-col h-full group cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl z-30 bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-800 shadow-premium hover:border-brand-600"
-            onClick={() => router.push(`/courses/${course.slug}`)}
-        >
-            <div className="p-6">
-                <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${gradientForCourse()} flex items-center justify-center text-white mb-4 group-hover:scale-105 transition`}>
-                    {iconForCourse()}
+        <>
+            <div
+                className="bg-gray-100 border border-slate-400 rounded-xl p-5 hover:shadow-md hover:-translate-y-1 transition duration-300 group cursor-pointer h-full flex flex-col"
+                onClick={() => router.push(`/courses/${course.slug}`)}
+            >
+                {/* TOP SECTION: Category Badge */}
+                <div className="flex">
+                    <div className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-wider px-3 py-1 rounded-md bg-[#FDB827]/10 text-[#1F4037] border border-[#FDB827]/20">
+                        {getIcon()}
+                        {course.category}
+                    </div>
                 </div>
-                <Badge variant="default" className="bg-slate-800/10 text-slate-600 dark:text-slate-300 border-none backdrop-blur-md mb-3">
-                    {course.category}
-                </Badge>
-            </div>
 
-            <div className="px-6 pb-6 flex-1 flex flex-col">
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 leading-tight group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
+                {/* COURSE TITLE */}
+                <h3 className="mt-4 text-lg font-bold text-slate-900 group-hover:text-[#1F4037] transition-colors leading-tight">
                     {course.title}
                 </h3>
 
-                <div className="flex items-center gap-2 text-[10px] text-slate-400 dark:text-slate-500 font-black uppercase tracking-[0.15em] mb-4">
-                    <Icons.Clock className="w-3.5 h-3.5" />
-                    <span>{course.duration}</span>
-                    <span className="w-1 h-1 bg-slate-300 dark:bg-slate-700 rounded-full"></span>
-                    <span>Project Based</span>
+                {/* COURSE DESCRIPTION */}
+                <p className="mt-2 text-sm text-slate-500 line-clamp-2 leading-relaxed">
+                    {course.description}
+                </p>
+
+                {/* COURSE META INFO */}
+                <div className="mt-4 text-[11px] font-bold uppercase tracking-widest text-slate-400 flex items-center gap-3">
+                    <div className="flex items-center gap-1.5">
+                        <Clock size={12} />
+                        <span>{course.duration}</span>
+                    </div>
+                    <span className="opacity-30">•</span>
+                    <span>{getLevel()}</span>
                 </div>
 
-                {course.description && (
-                    <p className="text-sm text-slate-600 dark:text-slate-400 mb-4 line-clamp-2">
-                        {course.description}
-                    </p>
-                )}
+                {/* ACTION BUTTONS */}
+                <div className="mt-auto pt-6 flex items-center justify-between gap-4">
+                    <button
+                        className="text-xs font-black uppercase tracking-widest text-[#1F4037] hover:text-[#FDB827] flex items-center gap-1 group/btn transition-colors"
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            router.push(`/courses/${course.slug}`);
+                        }}
+                    >
+                        View Details
+                        <ChevronRight size={14} className="group-hover/btn:translate-x-0.5 transition-transform" />
+                    </button>
 
-                {/* Highlights List */}
-                <ul className="space-y-2 mb-6 flex-1">
-                    {displayHighlights.map((highlight: string, i: number) => (
-                        <li key={i} className="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
-                            <Icons.Check className="w-4 h-4 text-[#1F4037] dark:text-emerald-500 mt-0.5 shrink-0" />
-                            <span className="line-clamp-1">{highlight}</span>
-                        </li>
-                    ))}
-                </ul>
-
-                <div className="mt-auto">
-                    {/* Actions */}
-                    <div className="grid grid-cols-2 gap-3">
-                        <Button
-                            variant="outline"
-                            size="sm"
-                            className="w-full text-xs font-bold"
-                            onClick={(e) => {
-                                e.stopPropagation();
-                                router.push(`/courses/${course.slug}`);
-                            }}
-                        >
-                            View Details
-                        </Button>
-                        <Button
-                            variant="primary"
-                            size="sm"
-                            className="w-full text-xs font-bold bg-[#1F4037] hover:bg-[#163029] text-white border-none shadow-premium transition-all hover:scale-[1.02]"
-                            onClick={(e) => {
-                                e.stopPropagation();
-                                router.push('/contact');
-                            }}
-                        >
-                            Contact for Pricing
-                        </Button>
-                    </div>
+                    <Button
+                        variant="marigold"
+                        size="sm"
+                        className="rounded-lg font-black text-[10px] px-4"
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            setIsBrochureModalOpen(true);
+                        }}
+                    >
+                        Brochure
+                    </Button>
                 </div>
             </div>
-        </Card>
+
+            <BrochureModal
+                isOpen={isBrochureModalOpen}
+                onClose={() => setIsBrochureModalOpen(false)}
+                courseTitle={course.title}
+                brochureUrl={course.syllabusPdf || '#'}
+            />
+        </>
     );
 };
 

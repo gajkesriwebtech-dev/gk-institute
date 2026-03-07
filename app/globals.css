@@ -114,6 +114,19 @@ body {
     border: 1px solid rgba(253, 184, 39, 0.2);
   }
 
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
   .bg-alternate {
     background-color: #F8FAFC;
     /* Slate 50 for subtle variation */

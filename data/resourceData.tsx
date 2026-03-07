@@ -52,11 +52,11 @@ export const BLOGS: BlogPost[] = [
     excerpt: "Feeling stuck in 'tutorial hell'? Discover why endless tutorials hinder your coding career and how project-based learning at GK Institute is the ultimate escape. Learn to build, not just copy.",
     category: "Career Advice",
     readTime: "5 min read",
-    image: cld("resources/library/media-001", 800),
+    image: "/images/blog-tutorial-hell.png",
     date: "Oct 12, 2023",
     author: "Sarah Chen",
     authorRole: "Senior Engineer, Netflix",
-    authorImage: cld("resources/library/media-002", 200),
+    authorImage: "https://ui-avatars.com/api/?name=Sarah+Chen&background=random",
     content: (
       <>
         <p className="lead text-xl text-slate-600 dark:text-slate-300 mb-8">
@@ -101,11 +101,11 @@ export const BLOGS: BlogPost[] = [
     excerpt: "Master Figma's Auto-Layout, the powerful feature that mirrors CSS Flexbox for designers. Learn to build responsive components efficiently and avoid common design pitfalls.",
     category: "Design",
     readTime: "8 min read",
-    image: cld("resources/library/media-003", 800),
+    image: "/images/blog-figma.png",
     date: "Oct 08, 2023",
     author: "Priya Patel",
     authorRole: "Product Design Lead",
-    authorImage: cld("resources/library/media-004", 200),
+    authorImage: "https://ui-avatars.com/api/?name=Priya+Patel&background=random",
     content: (
       <>
         <p className="lead text-xl text-slate-600 dark:text-slate-300 mb-8">
@@ -147,11 +147,11 @@ export const BLOGS: BlogPost[] = [
     excerpt: "Dive into React Server Components (RSCs) with a practical, jargon-free introduction. Understand how RSCs in Next.js 14 revolutionize data fetching and component rendering for modern web applications.",
     category: "Engineering",
     readTime: "12 min read",
-    image: cld("resources/library/media-005", 800),
+    image: "/images/blog-react.png",
     date: "Sep 28, 2023",
     author: "David Miller",
     authorRole: "Staff Engineer, Google",
-    authorImage: cld("resources/library/media-006", 200),
+    authorImage: "https://ui-avatars.com/api/?name=David+Miller&background=random",
     content: (
       <>
         <p className="lead text-xl text-slate-600 dark:text-slate-300 mb-8">
@@ -193,11 +193,11 @@ export const BLOGS: BlogPost[] = [
     excerpt: "Discover why the traditional 4 Ps of marketing are outdated in the digital age. Learn about the modern 4 Cs (Consumer, Cost, Convenience, Communication) and how to apply them for effective digital strategies.",
     category: "Marketing",
     readTime: "6 min read",
-    image: cld("resources/library/media-007", 800),
+    image: "/images/blog-marketing.png",
     date: "Aug 15, 2023",
     author: "Mike Ross",
     authorRole: "CMO, GK Agency",
-    authorImage: cld("resources/library/media-008", 200),
+    authorImage: "https://ui-avatars.com/api/?name=Mike+Ross&background=random",
     content: (
       <>
         <p className="lead text-xl text-slate-600 dark:text-slate-300 mb-8">
@@ -237,11 +237,11 @@ export const BLOGS: BlogPost[] = [
     excerpt: "In the age of AI-generated content, discover why high-quality backlinks remain a critical ranking factor for Google. Learn strategies for building authority and trust in 2024 and beyond.",
     category: "SEO",
     readTime: "7 min read",
-    image: cld("resources/library/media-009", 800),
+    image: "/images/blog-seo.png",
     date: "Jul 22, 2023",
     author: "Sarah Chen",
     authorRole: "Senior Engineer",
-    authorImage: cld("resources/library/media-010", 200),
+    authorImage: "https://ui-avatars.com/api/?name=Sarah+Chen&background=random",
     content: (
       <>
         <p className="lead text-xl text-slate-600 dark:text-slate-300 mb-8">
@@ -286,11 +286,11 @@ export const BLOGS: BlogPost[] = [
     excerpt: "Discover how our agency automated client onboarding, reporting, and lead management using Zapier, saving over 40 hours weekly and significantly boosting efficiency and client satisfaction.",
     category: "Automation",
     readTime: "9 min read",
-    image: cld("resources/library/media-011", 800),
+    image: "/images/blog-automation.png",
     date: "Jun 10, 2023",
     author: "James Wilson",
     authorRole: "Ops Manager",
-    authorImage: cld("resources/library/media-012", 200),
+    authorImage: `https://ui-avatars.com/api/?name=${encodeURIComponent("James Wilson")}&background=random`,
     content: (
       <>
         <p className="lead text-xl text-slate-600 dark:text-slate-300 mb-8">
@@ -356,11 +356,11 @@ export const BLOGS: BlogPost[] = [
     excerpt: "Explore the cutting-edge trends shaping web development, from AI-powered tools and Web3 decentralization to low-code platforms and the rise of Rust. Stay ahead of the curve.",
     category: "Engineering",
     readTime: "10 min read",
-    image: cld("resources/library/media-027", 800),
+    image: "/images/blog-future.png",
     date: "Nov 01, 2023",
     author: "Alex Johnson",
     authorRole: "Lead Developer Advocate",
-    authorImage: cld("resources/library/media-028", 200),
+    authorImage: "https://ui-avatars.com/api/?name=Alex+Johnson&background=random",
     content: (
       <>
         <p className="lead text-xl text-slate-600 dark:text-slate-300 mb-8">
@@ -409,7 +409,7 @@ export const EBOOKS: Ebook[] = [
     title: "The Junior Dev Survival Guide",
     description: "Everything they don't teach you in bootcamps about surviving your first job.",
     pages: 45,
-    cover: cld("resources/library/media-013", 600),
+    cover: "/images/ebook-junior-dev.png",
     audience: "Entry-level Developers",
     toc: ["Imposter Syndrome", "Git for Teams", "Asking Good Questions", "Code Review Etiquette"],
     sampleChapter: (
@@ -437,32 +437,25 @@ export const EBOOKS: Ebook[] = [
   },
   {
     id: '2',
-    slug: 'freelance-rate-calculator',
-    title: "Freelance Rate Calculator Workbook",
-    description: "A workbook to help you calculate your hourly rate and stop undercharging.",
-    pages: 12,
-    cover: cld("resources/library/media-014", 600),
-    audience: "Freelancers & Consultants",
-    toc: ["Determining Baseline Needs", "Tax & Overhead", "Value-Based Pricing", "Negotiation Scripts"],
+    slug: 'remote-work-os',
+    title: "The Remote Work OS Guide",
+    description: "A comprehensive framework for staying productive and visible while working from anywhere.",
+    pages: 28,
+    cover: "/images/ebook-remote-os.png",
+    audience: "Remote Professionals",
+    toc: ["Communication Protocols", "Deep Work Rituals", "Digital Visibility", "Ergonomic Setup"],
     sampleChapter: (
       <>
-        <h3>Why You Are Undercharging</h3>
+        <h3>The Visibility Gap</h3>
         <p>
-          Most freelancers take their desired annual salary, divide it by 2,080 (40 hours * 52 weeks), and call that their hourly rate. This is a recipe for poverty.
+          In a physical office, visibility is passive. You are seen at your desk, in meetings, and at the coffee machine. In a remote world, visibility must be <strong>intentional</strong>.
         </p>
         <p>
-          <strong>You are not billable 100% of the time.</strong> You have admin work, sales calls, and sick days. A healthy freelance business is usually only 60% billable.
-        </p>
-        <h4>The Formula</h4>
-        <div className="bg-slate-100 dark:bg-slate-800 p-4 rounded mb-4">
-          (Desired Salary + Overhead + Profit Margin) / (Billable Hours)
-        </div>
-        <p>
-          If you want $100k/year, and you have $20k expenses, and you work 1000 billable hours... your rate isn't $50/hr. It's $120/hr.
+          The Remote Work OS is about building systems that ensure your impact is recognized without you needing to be "always on."
         </p>
       </>
     ),
-    link: "https://www.hellobonsai.com/blog/freelance-hourly-rate-calculator"
+    link: "https://www.remote.com/blog/remote-work-guide"
   },
   {
     id: '3',
@@ -470,7 +463,7 @@ export const EBOOKS: Ebook[] = [
     title: "The Modern SEO Playbook",
     description: "A strategic guide to ranking in the era of AI and SGE (Search Generative Experience).",
     pages: 60,
-    cover: cld("resources/library/media-015", 600),
+    cover: "/images/ebook-seo-playbook.png",
     audience: "Marketers & Content Creators",
     toc: ["Keyword Research 2.0", "E-E-A-T Principles", "Technical SEO Audits", "AI Content Workflows"],
     sampleChapter: (
@@ -493,7 +486,7 @@ export const EBOOKS: Ebook[] = [
     title: "Website Conversion Handbook",
     description: "Turn traffic into revenue. A guide to CRO (Conversion Rate Optimization) psychology.",
     pages: 35,
-    cover: cld("resources/library/media-016", 600),
+    cover: "/images/ebook-conversion.png",
     audience: "Designers & Founders",
     toc: ["Above the Fold Mastery", "Social Proof Psychology", "Form Optimization", "The Call to Action"],
     sampleChapter: (
@@ -524,7 +517,7 @@ export const LESSONS: MicroLesson[] = [
     title: "Deploying to Vercel",
     category: "DevOps",
     duration: "4:30",
-    thumbnail: cld("resources/library/media-017", 600),
+    thumbnail: "https://img.youtube.com/vi/gbpY2f2pF94/hqdefault.jpg",
     videoUrl: "https://www.youtube.com/embed/gbpY2f2pF94",
     explanation: <p>Learn how to connect your GitHub repository to Vercel for continuous deployment. We cover environment variables, build settings, and custom domains.</p>,
     takeaways: ["Git Integration", "Env Variables", "Automatic SSL"],
@@ -536,7 +529,7 @@ export const LESSONS: MicroLesson[] = [
     title: "Writing Your First Custom Hook",
     category: "React",
     duration: "6:15",
-    thumbnail: cld("resources/library/media-018", 600),
+    thumbnail: "https://img.youtube.com/vi/TNhaISOUy6Q/hqdefault.jpg",
     videoUrl: "https://www.youtube.com/embed/TNhaISOUy6Q",
     explanation: <p>Extract logic from your components into reusable functions. We build a `useWindowSize` hook from scratch.</p>,
     takeaways: ["DRY Principle", "useEffect Cleanup", "Returning Values"],
@@ -548,7 +541,7 @@ export const LESSONS: MicroLesson[] = [
     title: "SEO Basics in 5 Mins",
     category: "Marketing",
     duration: "5:00",
-    thumbnail: cld("resources/library/media-019", 600),
+    thumbnail: "https://img.youtube.com/vi/DvwS7cV9GmQ/hqdefault.jpg",
     videoUrl: "https://www.youtube.com/embed/DvwS7cV9GmQ",
     explanation: <p>Understand the three pillars of SEO: Technical, On-Page, and Off-Page. A high-level overview for beginners.</p>,
     takeaways: ["Crawling vs Indexing", "Title Tags", "Backlink Importance"],
@@ -560,7 +553,7 @@ export const LESSONS: MicroLesson[] = [
     title: "Keyword Research 101",
     category: "Marketing",
     duration: "3:45",
-    thumbnail: cld("resources/library/media-020", 600),
+    thumbnail: "https://img.youtube.com/vi/gbpY2f2pF94/hqdefault.jpg",
     videoUrl: "https://www.youtube.com/embed/gbpY2f2pF94",
     explanation: <p>How to find what your customers are actually searching for using free tools like Google Trends and Autosuggest.</p>,
     takeaways: ["Search Volume", "Search Intent", "Long-tail Keywords"],
@@ -572,7 +565,7 @@ export const LESSONS: MicroLesson[] = [
     title: "Anatomy of a Landing Page",
     category: "Design",
     duration: "4:20",
-    thumbnail: cld("resources/library/media-021", 600),
+    thumbnail: "https://img.youtube.com/vi/TNhaISOUy6Q/hqdefault.jpg",
     videoUrl: "https://www.youtube.com/embed/TNhaISOUy6Q",
     explanation: <p>Break down the essential elements of a high-converting landing page: Hero, Benefits, Social Proof, and CTA.</p>,
     takeaways: ["Headline clarity", "Trust signals", "Single goal"],
@@ -584,7 +577,7 @@ export const LESSONS: MicroLesson[] = [
     title: "Writing Viral Social Hooks",
     category: "Content",
     duration: "2:50",
-    thumbnail: cld("resources/library/media-022", 600),
+    thumbnail: "https://img.youtube.com/vi/DvwS7cV9GmQ/hqdefault.jpg",
     videoUrl: "https://www.youtube.com/embed/DvwS7cV9GmQ",
     explanation: <p>Stop the scroll. Learn the psychology behind headlines that force people to read the next line.</p>,
     takeaways: ["Curiosity gaps", "Negative framing", "Specific numbers"],
@@ -596,7 +589,7 @@ export const LESSONS: MicroLesson[] = [
     title: "CRO & Color Psychology",
     category: "Design",
     duration: "3:30",
-    thumbnail: cld("resources/library/media-023", 600),
+    thumbnail: "https://img.youtube.com/vi/gbpY2f2pF94/hqdefault.jpg",
     videoUrl: "https://www.youtube.com/embed/gbpY2f2pF94",
     explanation: <p>Does the color of the button matter? Yes, but contrast matters more. Learn accessible color theory.</p>,
     takeaways: ["Contrast ratios", "Brand consistency", "Action colors"],
@@ -608,7 +601,7 @@ export const LESSONS: MicroLesson[] = [
     title: "Setting up GA4",
     category: "Analytics",
     duration: "5:15",
-    thumbnail: cld("resources/library/media-024", 600),
+    thumbnail: "https://img.youtube.com/vi/TNhaISOUy6Q/hqdefault.jpg",
     videoUrl: "https://www.youtube.com/embed/TNhaISOUy6Q",
     explanation: <p>Transitioning from Universal Analytics to GA4. Setting up your data stream and events.</p>,
     takeaways: ["Events vs Sessions", "Data Streams", "Privacy"],
@@ -620,7 +613,7 @@ export const LESSONS: MicroLesson[] = [
     title: "Email Funnel Basics",
     category: "Marketing",
     duration: "4:00",
-    thumbnail: cld("resources/library/media-025", 600),
+    thumbnail: "https://img.youtube.com/vi/DvwS7cV9GmQ/hqdefault.jpg",
     videoUrl: "https://www.youtube.com/embed/DvwS7cV9GmQ",
     explanation: <p>The journey from subscriber to customer. Welcome sequence structure.</p>,
     takeaways: ["Lead Magnets", "Nurture sequence", "Sales emails"],
@@ -632,7 +625,7 @@ export const LESSONS: MicroLesson[] = [
     title: "AI in Content Marketing",
     category: "AI",
     duration: "3:10",
-    thumbnail: cld("resources/library/media-026", 600),
+    thumbnail: "https://img.youtube.com/vi/gbpY2f2pF94/hqdefault.jpg",
     videoUrl: "https://www.youtube.com/embed/gbpY2f2pF94",
     explanation: <p>Using LLMs to brainstorm, outline, and repurpose content without losing the human touch.</p>,
     takeaways: ["Prompt engineering", "Editing AI", "Repurposing"],

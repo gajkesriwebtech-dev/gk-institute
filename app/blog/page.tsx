@@ -60,11 +60,11 @@ const BlogPage = () => {
                                 className="group cursor-pointer overflow-hidden border-slate-200 dark:border-slate-800"
                                 onClick={() => router.push(`/resources/blog/${blog.slug}`)}
                             >
-                                <div className="h-48 overflow-hidden">
-                                    <img
-                                        src="/illustrations/blog.svg"
+                                <div className="h-48 overflow-hidden bg-slate-100 dark:bg-slate-900 shadow-inner">
+                                    <MediaImage
+                                        src={blog.image}
                                         alt={blog.title}
-                                        className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                     />
                                 </div>
                                 <div className="p-6">

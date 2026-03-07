@@ -9,15 +9,15 @@ const ANNOUNCEMENTS = [
         id: 1,
         title: "New Campus Opening",
         subtitle: "Visit our new state-of-the-art facility in New Delhi.",
-        image: cld("promotions/gkwebtech-hero", 1200),
+        image: "/images/hero-campus.png",
         badge: "Announcement",
         color: "bg-blue-600"
     },
     {
         id: 2,
         title: "20% Inaugural Discount",
-        subtitle: "Enroll in any Pro course this month and save big.",
-        image: cld("resources/library/media-017", 1200),
+        subtitle: "Get 20% off on any Pro course. Valid for the first 5 students only!",
+        image: "/images/hero-discount.png",
         badge: "Limited Offer",
         color: "bg-[#FDB827]"
     },
@@ -25,7 +25,7 @@ const ANNOUNCEMENTS = [
         id: 3,
         title: "Guaranteed Internships",
         subtitle: "Join our Agency Workspace and work on real client projects.",
-        image: cld("resources/library/media-018", 1200),
+        image: "/images/hero-internship.png",
         badge: "Placement",
         color: "bg-emerald-600"
     }

@@ -15,7 +15,7 @@ export const FULL_PROGRAM_CATALOG: Program[] = [
         category: "Technology & Development",
         description: "An intensive immersion into full stack engineering. Master MongoDB, Express, React, and Node with advanced architecture and deployment.",
         duration: "6 Months",
-        thumbnail: cld("mern_d6lnmj", 600),
+        thumbnail: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=600",
         price: 45000,
         originalPrice: 65000,
         highlights: [
@@ -52,7 +52,7 @@ export const FULL_PROGRAM_CATALOG: Program[] = [
         category: "Creative & Design",
         description: "Transform ideas into stunning digital experiences. Master user research, wireframing, and interactive prototyping.",
         duration: "3 Months",
-        thumbnail: cld("courses/ui-ux-design", 600),
+        thumbnail: "https://images.unsplash.com/photo-1586717791821-3f44a16ed321?auto=format&fit=crop&q=80&w=600",
         price: 35000,
         originalPrice: 50000,
         highlights: [
@@ -89,7 +89,7 @@ export const FULL_PROGRAM_CATALOG: Program[] = [
         category: "Technology & Development",
         description: "Beyond simple sites. Master custom themes, plugin development, and high-security WordPress architectures.",
         duration: "4 Months",
-        thumbnail: cld("wordpress_ghuw0t", 600),
+        thumbnail: "https://images.unsplash.com/photo-1551033406-611cf9a28f67?auto=format&fit=crop&q=80&w=600",
         price: 20000,
         originalPrice: 30000,
         highlights: [
@@ -1079,43 +1079,6 @@ export const FULL_PROGRAM_CATALOG: Program[] = [
             { id: 6, title: "Consultant", description: "Design winning content strategies for personal and corporate brands." }
         ],
         keyFeatures: ["Viral Hub", "Script Audits", "Growth Kits"]
-    },
-    {
-        id: "instagram-reel-base",
-        slug: "instagram-reel-creation",
-        programType: 'foundation',
-        title: "Instagram Reel Creation",
-        category: "Digital Marketing & Online Business",
-        description: "Dominate short-form video. Master the shooting, editing, and algorithm secrets to go viral on Instagram and TikTok.",
-        duration: "1 Month",
-        thumbnail: cld("courses/instagram-shorts-mastery", 600),
-        price: 8000,
-        originalPrice: 12000,
-        highlights: [
-            "Viral Growth Hacks",
-            "Shooting & Transitions",
-            "Retention Hook Lab",
-            "CapCut Mastery",
-            "Real-World Projects"
-        ],
-        modules: [
-            { title: "Module 1: Instagram Algorithm", topics: ["Reels vs Feed", "Engagement signals", "Trending audio"] },
-            { title: "Module 2: Reel Shooting Techniques", topics: ["Angles/Lighting", "Stability", "Performing for camera"] },
-            { title: "Module 3: Editing Apps & Tools", topics: ["CapCut basics", "Native IG editor", "Overlaying text"] },
-            { title: "Module 4: Hook & Retention", topics: ["The 3-sec rule", "Speed ramping", "Pacing & music"] },
-            { title: "Module 5: Growth Strategy", topics: ["Hashtag strategy", "Posting times", "Engagement loops"] },
-            { title: "Module 6: Practical Reel Projects", topics: ["Product showcase", "Lifestyle reel", "Trending challenge"] }
-        ],
-        jobRoles: ["Reel Creator", "Social Media Influencer", "Content Marketer"],
-        outcomes: [
-            { id: 1, title: "Reel Expert", description: "Produce high-impact short-form videos with professional polish." },
-            { id: 2, title: "Viral Strategist", description: "Engineer content designed to explode on discover pages." },
-            { id: 3, title: "Editing Master", description: "Execute complex transitions and edits with machine-speed efficiency." },
-            { id: 4, title: "Growth Manager", description: "Build a massive social following through consistent viral output." },
-            { id: 5, title: "Influencer", description: "Partner with global brands for high-ticket content deals." },
-            { id: 6, title: "Content Engine", description: "Batch produce a month of social content in a single day." }
-        ],
-        keyFeatures: ["Trend Alerts", "CapCut Labs", "Viral Maps"]
     },
     {
         id: "mobile-photography-base",

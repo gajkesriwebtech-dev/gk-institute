@@ -66,21 +66,27 @@ const CoursesPage: React.FC = () => {
                             Industry Grade <br /> <span className="text-secondary-500">Certification Programs</span>
                         </h1>
                         <p className="text-lg text-brand-50 mb-8 max-w-xl mx-auto md:mx-0 leading-relaxed opacity-90">
-                            Upskill with our comprehensive curricula designed by industry veterans. All courses include real-world projects and certification.
+                            Upskill with industry-aligned curricula designed by veterans. <span className="text-secondary-400 font-black italic">Get 20% Inaugural Discount — valid for the first 5 students only!</span>
                         </p>
                         <Button variant="primary" size="lg" className="px-8 shadow-xl bg-secondary-500 text-brand-900 hover:bg-secondary-600 border-none font-bold" onClick={() => document.getElementById('catalog-start')?.scrollIntoView({ behavior: 'smooth' })}>
                             Browse Program Catalog
                         </Button>
                     </div>
                     <div className="flex-1 w-full max-w-md hidden md:block relative z-30">
-                        <div className="relative">
-                            <div className="absolute top-0 right-0 w-64 h-64 bg-secondary-400/20 rounded-full blur-3xl -z-10"></div>
+                        <div className="relative animate-float">
+                            <div className="absolute top-0 right-0 w-64 h-64 bg-secondary-400/20 rounded-full blur-3xl -z-10 animate-pulse"></div>
                             <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -z-10"></div>
                             <img
-                                src="/illustrations/web-development.svg"
-                                alt="Learning Illustration"
-                                className="rounded-2xl shadow-2xl border-4 border-white/20 dark:border-slate-800 rotate-2 hover:rotate-0 transition-transform duration-500"
+                                src="/images/courses-hero.png"
+                                alt="Special Offer"
+                                className="rounded-3xl shadow-2xl border-4 border-white/20 dark:border-slate-800 transition-all duration-700 hover:scale-105 hover:rotate-0"
                             />
+                            {/* Decorative Badge Overlay */}
+                            <div className="absolute -top-6 -right-6 bg-[#FDB827] text-white p-4 rounded-2xl shadow-xl rotate-12 animate-bounce flex flex-col items-center min-w-[140px]">
+                                <span className="text-[10px] font-black uppercase tracking-widest">Inaugural Offer</span>
+                                <span className="text-2xl font-black">20% OFF</span>
+                                <span className="text-[10px] font-bold uppercase tracking-tight mt-1 opacity-90 text-slate-900/80">First 5 Students</span>
+                            </div>
                         </div>
                     </div>
                 </div>

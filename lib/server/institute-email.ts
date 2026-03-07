@@ -34,7 +34,7 @@ function normalizeCourseLabel(courseSlug?: string): string | null {
     .join(" ");
 }
 
-function getTransporter(): Transporter {
+export function getTransporter(): Transporter {
   const host = process.env.EMAIL_HOST;
   const port = Number(process.env.EMAIL_PORT || 465);
   const user = process.env.EMAIL_USER;

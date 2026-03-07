@@ -23,7 +23,7 @@ export const TESTIMONIALS: Testimonial[] = [
     rating: 5,
     source: "platform",
     courseId: "mern-stack-development",
-    avatarUrl: cld("testimonials/student1", 200),
+    avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=facearea&facepad=2&w=200&h=200&q=80",
     publishedAt: "2025-10-18"
   },
   {
@@ -35,7 +35,7 @@ export const TESTIMONIALS: Testimonial[] = [
     rating: 5,
     source: "google",
     courseId: "digital-marketing",
-    avatarUrl: cld("testimonials/student2", 200),
+    avatarUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=facearea&facepad=2&w=200&h=200&q=80",
     publishedAt: "2025-09-05"
   },
   {
@@ -46,7 +46,7 @@ export const TESTIMONIALS: Testimonial[] = [
     rating: 4,
     source: "linkedin",
     courseId: "n8n-automation",
-    avatarUrl: cld("testimonials/student3", 200),
+    avatarUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=facearea&facepad=2&w=200&h=200&q=80",
     publishedAt: "2025-11-22"
   }
 ];

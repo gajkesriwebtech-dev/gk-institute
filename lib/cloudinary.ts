@@ -12,8 +12,8 @@ export const FALLBACK_COURSE_IMAGE = `/images/course-placeholder.svg`;
 export const cld = (publicId: string, width?: number, height?: number): string => {
     if (!publicId) return "";
 
-    // Handle full URLs if they accidentally pass through
-    if (publicId.startsWith('http')) return publicId;
+    // Handle full URLs or local paths if they accidentally pass through
+    if (publicId.startsWith('http') || publicId.startsWith('/')) return publicId;
 
     const transformations = [
         'f_auto',

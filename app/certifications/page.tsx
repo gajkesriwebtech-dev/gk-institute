@@ -15,28 +15,28 @@ const PORTFOLIO_PROJECTS = [
     {
         title: "Full-Stack, DevOps, AI Automation",
         category: "Web Development, DevOps & Automation",
-        image: cld("resources/library/media-019", 800),
+        image: "/images/portfolio-tech.png",
         student: "Utkarsh Sharma",
         driveLink: "https://drive.google.com/drive/folders/your-link-here-1"
     },
     {
         title: "Automated Lead Gen Bot",
         category: "AI & Automation",
-        image: cld("resources/library/media-020", 800),
+        image: "/images/blog-automation.png",
         student: "Neha Gupta",
         driveLink: "https://drive.google.com/drive/folders/your-link-here-2"
     },
     {
         title: "SaaS Marketing Campaign",
         category: "Digital Marketing",
-        image: cld("resources/library/media-021", 800),
+        image: "/images/blog-marketing.png",
         student: "Vikram Singh",
         driveLink: "https://drive.google.com/drive/folders/your-link-here-3"
     },
     {
         title: "Real Estate Dashboard",
         category: "Full Stack Dev",
-        image: cld("resources/library/media-022", 800),
+        image: "/images/blog-react.png",
         student: "Rohan Mehra",
         driveLink: "https://drive.google.com/drive/folders/your-link-here-4"
     }
@@ -345,12 +345,14 @@ const CertificationsPage = () => {
                                 </Button>
                             </div>
                         </div>
-                        <div className="relative group hidden lg:block">
+                        <div className="relative group block">
                             <div className="absolute -inset-4 bg-white/5 rounded-3xl blur-2xl"></div>
                             <div className="relative rounded-3xl overflow-hidden border-2 border-white/10 shadow-2xl">
-                                <img
-                                    src={cld("promotions/gkwebtech-hero", 800)}
+                                <MediaImage
+                                    src="/images/about_us_hero.png"
                                     alt="Contact GK Institute"
+                                    width={800}
+                                    height={600}
                                     className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105 opacity-80"
                                 />
                             </div>

@@ -156,23 +156,68 @@ const ResourcesMegaMenuContent: React.FC<{ onClose: () => void }> = ({ onClose }
     router.push(path);
   };
 
-  const resourceLinks = NAVBAR_LINKS.find(l => l.label === 'Resources')?.children || [];
+  const resourceLinks = [
+    {
+      label: 'Agency Blog',
+      href: '/blog',
+      description: 'Stay ahead with industry insights, tutorials, and career advice.',
+      icon: <Icons.BookOpen className="w-5 h-5" />,
+      color: 'text-blue-500',
+      bgColor: 'bg-blue-50 dark:bg-blue-900/20'
+    },
+    {
+      label: 'Micro-Lessons',
+      href: '/micro-lessons',
+      description: 'Bite-sized technical workshops and rapid skill-building gems.',
+      icon: <Icons.PlayCircle className="w-5 h-5" />,
+      color: 'text-emerald-500',
+      bgColor: 'bg-emerald-50 dark:bg-emerald-900/20',
+      isNew: true
+    },
+    {
+      label: 'Free Ebooks',
+      href: '/ebooks',
+      description: 'Deep-dive guides and playbooks to accelerate your journey.',
+      icon: <Icons.FileText className="w-5 h-5" />,
+      color: 'text-amber-500',
+      bgColor: 'bg-amber-50 dark:bg-amber-900/20'
+    }
+  ];
 
   return (
-    <div className="w-full max-w-4xl mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {resourceLinks.map((link: any) => (
+    <div className="w-full max-w-5xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {resourceLinks.map((link) => (
           <button
             key={link.label}
             onClick={() => handleNavigate(link.href)}
-            className="flex flex-col text-left p-6 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-900 transition-all border border-transparent hover:border-slate-100 dark:hover:border-slate-800 group"
+            className="flex items-start gap-5 p-6 rounded-2xl bg-slate-50/50 dark:bg-slate-900/50 hover:bg-white dark:hover:bg-slate-800 transition-all border border-transparent hover:border-slate-100 dark:hover:border-slate-700 hover:shadow-xl group relative overflow-hidden text-left"
           >
-            <span className="text-sm font-black text-slate-900 dark:text-white mb-2 uppercase tracking-widest group-hover:text-[#1F4037] dark:group-hover:text-emerald-500 transition-colors">
-              {link.label}
-            </span>
-            <span className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-              {link.description}
-            </span>
+            {/* Animated background decoration */}
+            <div className={`absolute -right-4 -bottom-4 w-24 h-24 rounded-full opacity-0 group-hover:opacity-10 transition-all duration-500 ${link.bgColor} scale-0 group-hover:scale-150`}></div>
+
+            <div className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3 ${link.bgColor} ${link.color}`}>
+              {link.icon}
+            </div>
+
+            <div className="flex-1 relative z-10">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-sm font-black text-slate-900 dark:text-white uppercase tracking-widest group-hover:text-[#1F4037] dark:group-hover:text-emerald-400 transition-colors">
+                  {link.label}
+                </span>
+                {link.isNew && (
+                  <span className="bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-400 text-[8px] font-black px-1.5 py-0.5 rounded uppercase tracking-tighter animate-pulse">
+                    New
+                  </span>
+                )}
+              </div>
+              <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed group-hover:text-slate-600 dark:group-hover:text-slate-300 transition-colors">
+                {link.description}
+              </p>
+              <div className="mt-4 flex items-center gap-1 text-[10px] font-bold text-slate-400 opacity-0 group-hover:opacity-100 transition-all translate-y-2 group-hover:translate-y-0 uppercase tracking-widest">
+                Explore <Icons.ArrowRight className="w-3 h-3" />
+              </div>
+            </div>
           </button>
         ))}
       </div>

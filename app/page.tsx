@@ -88,25 +88,25 @@ const PORTFOLIO_PROJECTS = [
     {
         title: "E-Commerce Re-Design",
         category: "UI/UX & Frontend",
-        image: cld("resources/library/media-019", 600),
+        image: "/images/blog-figma.png",
         student: "Ayush Sharma"
     },
     {
         title: "Automated Lead Gen Bot",
         category: "AI & Automation",
-        image: cld("resources/library/media-020", 600),
+        image: "/images/blog-automation.png",
         student: "Neha Gupta"
     },
     {
         title: "SaaS Marketing Campaign",
         category: "Digital Marketing",
-        image: cld("resources/library/media-021", 600),
+        image: "/images/blog-marketing.png",
         student: "Vikram Singh"
     },
     {
         title: "Real Estate Dashboard",
         category: "Full Stack Dev",
-        image: cld("resources/library/media-022", 600),
+        image: "/images/blog-react.png",
         student: "Rohan Mehra"
     }
 ];
@@ -750,7 +750,7 @@ const LandingPage = () => {
             <section className="py-24 bg-white dark:bg-slate-950 transition-colors duration-300 z-20 relative">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-30">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
-                        <div className="relative group">
+                        <div className="relative group block">
                             <div className="absolute -inset-4 bg-slate-100 dark:bg-slate-800 rounded-3xl blur-2xl transition-all duration-700"></div>
                             <div className="relative rounded-3xl overflow-hidden border-2 border-slate-100 dark:border-slate-800 shadow-2xl">
                                 <img

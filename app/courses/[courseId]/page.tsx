@@ -103,51 +103,122 @@ const ProgramDetailPage = () => {
             <div className="robot-anchor absolute top-0 left-0 w-full h-full pointer-events-none"
                 data-section="hero" data-top="15%" data-right="-40px" data-scale="0.8" />
 
-            {/* 1. HERO SECTION */}
+            {/* 1. NEW HERO SECTION */}
             <section className="bg-slate-50 dark:bg-slate-900 pt-20 pb-24 relative overflow-hidden transition-colors duration-300 z-10">
                 <GridPattern className="opacity-60" />
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-30">
-                    <div className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-6 flex items-center gap-2">
-                        Courses <Icons.ChevronRight className="w-3 h-3" /> {course.category} <Icons.ChevronRight className="w-3 h-3" /> <span className="text-brand-600 dark:text-brand-400">{course.title}</span>
-                    </div>
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
 
-                    <div className="flex flex-col md:flex-row gap-12 items-center">
-                        <div className="flex-1 relative z-30">
-                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white mb-6 leading-tight">
+                        {/* LEFT SIDE: Information */}
+                        <div className="lg:col-span-7 space-y-6">
+                            {/* Category Badge */}
+                            <div className="inline-flex items-center text-xs font-bold px-3 py-1 rounded-md bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-400">
+                                {course.category}
+                            </div>
+
+                            {/* Title */}
+                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 dark:text-white leading-tight">
                                 {course.title}
                             </h1>
-                            <p className="text-lg text-slate-600 dark:text-slate-300 mb-8 leading-relaxed max-w-2xl">
-                                Stay relevant and advance your career with the <strong>GK Institute Professional Certification</strong>.
+
+                            {/* Description */}
+                            <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed">
                                 {course.description}
                             </p>
 
-                            <div className="flex flex-wrap gap-4">
+                            {/* Metadata Row */}
+                            <div className="flex flex-wrap items-center gap-6 text-sm font-bold text-slate-500 dark:text-slate-400 border-y border-slate-200 dark:border-slate-800 py-4">
+                                <span className="flex items-center gap-2">
+                                    <Icons.Clock className="w-5 h-5 text-brand-600 dark:text-brand-400" />
+                                    {course.duration}
+                                </span>
+                                <span className="flex items-center gap-2">
+                                    <Icons.GraduationCap className="w-5 h-5 text-brand-600 dark:text-brand-400" />
+                                    {course.programType === 'foundation' ? 'Beginner Friendly' :
+                                        course.programType === 'pro' ? 'Intermediate' : 'Advanced'}
+                                </span>
+                                <span className="flex items-center gap-2">
+                                    <Icons.Monitor className="w-5 h-5 text-brand-600 dark:text-brand-400" />
+                                    Offline + Online
+                                </span>
+                            </div>
+
+                            {/* Skills / Technologies Row */}
+                            <div className="space-y-3">
+                                <h4 className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Industry Standards & Skills</h4>
+                                <div className="flex flex-wrap gap-2">
+                                    {course.keyFeatures?.map((skill, idx) => (
+                                        <span key={idx} className="px-3 py-1 text-xs font-bold bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 rounded-lg shadow-sm">
+                                            {skill}
+                                        </span>
+                                    ))}
+                                </div>
+                            </div>
+
+                            {/* CTA Buttons */}
+                            <div className="pt-4 flex flex-wrap gap-4">
                                 <Button
                                     variant="marigold"
                                     size="lg"
-                                    className="px-12 py-4 font-black shadow-2xl"
-                                    onClick={() => router.push('/contact')}
+                                    className="px-8 py-4 text-sm uppercase tracking-widest font-black shadow-xl hover:shadow-2xl transition-all"
+                                    onClick={() => setIsBrochureModalOpen(true)}
                                 >
-                                    Contact for Pricing
+                                    Download Brochure <Icons.Download className="ml-2 w-4 h-4" />
                                 </Button>
                                 <Button
                                     variant="secondary"
                                     size="lg"
-                                    className="px-10 py-4 font-black border-slate-200 dark:border-slate-800"
-                                    onClick={() => setIsBrochureModalOpen(true)}
+                                    className="px-8 py-4 text-sm uppercase tracking-widest font-black border-2"
+                                    onClick={() => router.push('/contact')}
                                 >
-                                    Download Brochure
+                                    Talk to Counselor
                                 </Button>
                             </div>
                         </div>
 
-                        <div className="relative w-full max-w-md aspect-video md:aspect-square rounded-2xl overflow-hidden shadow-2xl border-4 border-white dark:border-slate-800 group z-30 bg-white">
-                            <img
-                                src={illustrationForCourse()}
-                                alt={`${course.title} Illustration`}
-                                className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
-                            />
+                        {/* RIGHT SIDE: Promotional Discount Card */}
+                        <div className="lg:col-span-5 flex justify-center lg:justify-end">
+                            <div className="bg-white dark:bg-slate-900 border-2 border-[#1F4037]/10 dark:border-slate-800 rounded-3xl p-8 shadow-2xl max-w-md w-full relative group">
+                                <div className="absolute -top-4 -right-4 bg-red-600 text-white text-[10px] font-black px-4 py-2 rounded-full uppercase tracking-widest shadow-lg animate-bounce">
+                                    Limited Time
+                                </div>
+
+                                <div className="space-y-6">
+                                    <div className="w-16 h-16 bg-[#FDB827]/10 rounded-2xl flex items-center justify-center">
+                                        <Icons.Award className="w-8 h-8 text-[#FDB827]" />
+                                    </div>
+
+                                    <div>
+                                        <h3 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-tight leading-tight">
+                                            Special Course <br />Enrollment Offer
+                                        </h3>
+                                        <p className="mt-4 text-slate-500 dark:text-slate-400 text-sm font-medium leading-relaxed">
+                                            Enroll this week to unlock exclusive institutional discounts and professional career guidance session worth ₹5,000 for FREE.
+                                        </p>
+                                    </div>
+
+                                    <div className="p-4 bg-slate-50 dark:bg-slate-950 rounded-2xl border border-dashed border-slate-200 dark:border-slate-800 text-center">
+                                        <div className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-1">Current Status</div>
+                                        <div className="text-[#1F4037] dark:text-emerald-500 font-black text-xl uppercase tracking-widest">
+                                            Discount Available
+                                        </div>
+                                    </div>
+
+                                    <Button
+                                        variant="marigold"
+                                        className="w-full py-4 uppercase tracking-widest font-black"
+                                        onClick={() => router.push('/contact')}
+                                    >
+                                        Check Eligibility
+                                    </Button>
+
+                                    <p className="text-[10px] text-center text-slate-400 font-medium">
+                                        *Offer valid for first 15 seats only. Terms & conditions apply.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </section>

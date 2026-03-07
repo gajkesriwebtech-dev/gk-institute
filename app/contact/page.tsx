@@ -169,14 +169,6 @@ const ContactPage = () => {
 
                         {/* Info Cards */}
                         <div className="space-y-8">
-                            {/* Contact Illustration */}
-                            <Card className="p-8 border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
-                                <img
-                                    src="/illustrations/contact.svg"
-                                    alt="Contact GK Institute"
-                                    className="w-full h-40 object-contain"
-                                />
-                            </Card>
 
                             {/* New AI Chat Option */}
                             <Card className="p-8 border-l-4 border-l-purple-500 dark:bg-slate-900 border-slate-200 dark:border-slate-800 shadow-lg shadow-purple-500/10">
