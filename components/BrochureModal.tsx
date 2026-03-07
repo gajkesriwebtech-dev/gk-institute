@@ -160,8 +160,14 @@ export const BrochureModal: React.FC<BrochureModalProps> = ({ isOpen, onClose, c
                         ) : (
                             <>
                                 <div className="text-center p-4 bg-indigo-50 dark:bg-indigo-900/10 rounded-2xl border border-indigo-100 dark:border-indigo-800 mb-6">
-                                    <p className="text-xs font-bold text-indigo-700 dark:text-indigo-400 uppercase tracking-widest mb-2">Code Sent to</p>
-                                    <p className="text-sm font-black text-slate-900 dark:text-white">{formData.email}</p>
+                                    <p className="text-xs font-bold text-indigo-700 dark:text-indigo-400 uppercase tracking-widest mb-1">Verification Code Sent</p>
+                                    <p className="text-sm font-black text-slate-900 dark:text-white mb-2">{formData.email}</p>
+                                    <div className="pt-3 border-t border-indigo-100 dark:border-indigo-800/50">
+                                        <p className="text-[10px] text-indigo-600 dark:text-indigo-400 font-bold leading-tight flex items-center justify-center gap-1.5">
+                                            <Icons.Info className="w-3.5 h-3.5" />
+                                            TIP: The PDF contains all courses. Use 'Ctrl+F' (Win) or 'Cmd+F' (Mac) to search for "{courseTitle}".
+                                        </p>
+                                    </div>
                                 </div>
                                 <div className="space-y-4">
                                     <p className="text-[11px] font-bold text-slate-400 uppercase tracking-widest text-center">Enter 6-Digit Code</p>
