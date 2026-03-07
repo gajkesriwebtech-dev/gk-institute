@@ -75,6 +75,8 @@ export const metadata: Metadata = {
   }
 };
 
+import { AIChatbot } from '@/components/AIChatbot';
+
 export default function RootLayout({
   children,
 }: {
@@ -85,6 +87,7 @@ export default function RootLayout({
       <body className="bg-white dark:bg-slate-950 transition-colors duration-300 font-sans">
         <ThemeProvider>
           {children}
+          <AIChatbot />
         </ThemeProvider>
       </body>
     </html>

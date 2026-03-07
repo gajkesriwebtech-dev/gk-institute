@@ -1,0 +1,200 @@
+{
+    "institute_name": "GK Institute (GK WebTech AI Institute)",
+    "overview": "GK Institute is a hybrid digital agency and training institute that bridges the gap between traditional education and industry requirements through intensive, project-based learning. We simulate a real agency environment where students work on live client projects using industry-standard tools.",
+    "mission": "To empower the future workforce by providing practical, job-ready skills through hands-on experience and direct mentorship from industry experts.",
+    "vision": "To be the leading global hub for high-impact technical and creative training, where every student graduates with a deployment-ready portfolio.",
+    "learning_methodology": {
+        "name": "Agency Workspace Model",
+        "steps": [
+            {
+                "step": "01",
+                "title": "Select Your Track",
+                "description": "Choose a specialized career path in Tech, Marketing, or Design."
+            },
+            {
+                "step": "02",
+                "title": "Join the Workspace",
+                "description": "Enter our digital office environment. Attend standups and use industry tools like Discord, Figma, and GitHub."
+            },
+            {
+                "step": "03",
+                "title": "Deliver Real Work",
+                "description": "Work on live client briefs under the guidance of agency mentors. No hypothetical case studies."
+            },
+            {
+                "step": "04",
+                "title": "Career Launch",
+                "description": "Leverage your portfolio and our agency network to secure your role in the industry."
+            }
+        ]
+    },
+    "course_categories": [
+        "Technology & Development",
+        "Creative & Design",
+        "AI & Automation",
+        "Digital Marketing & Online Business",
+        "Finance & Banking",
+        "Foundational & Career Skills"
+    ],
+    "available_courses": [
+        {
+            "name": "MERN Stack Mastery",
+            "slug": "mern-stack-mastery",
+            "category": "Technology & Development",
+            "duration": "6 Months",
+            "price": 45000,
+            "description": "An intensive immersion into full stack engineering. Master MongoDB, Express, React, and Node with advanced architecture and deployment.",
+            "skills": [
+                "MongoDB",
+                "Express",
+                "React",
+                "Node.js",
+                "REST APIs",
+                "JWT Authentication",
+                "Cloud Deployment"
+            ]
+        },
+        {
+            "name": "UI & UX Designing",
+            "slug": "ui-and-ux-designing",
+            "category": "Creative & Design",
+            "duration": "3 Months",
+            "price": 35000,
+            "description": "Transform ideas into stunning digital experiences. Master user research, wireframing, and interactive prototyping using Figma.",
+            "skills": [
+                "Figma",
+                "User Research",
+                "Wireframing",
+                "Prototyping",
+                "Design Systems",
+                "Accessibility"
+            ]
+        },
+        {
+            "name": "WordPress Development",
+            "slug": "wordpress-development",
+            "category": "Technology & Development",
+            "duration": "4 Months",
+            "price": 20000,
+            "description": "Beyond simple sites. Master custom themes, plugin development, and high-security WordPress architectures.",
+            "skills": [
+                "PHP",
+                "Gutenberg",
+                "Theme Customization",
+                "Elementor",
+                "WooCommerce",
+                "Security"
+            ]
+        },
+        {
+            "name": "n8n Smart Automation",
+            "slug": "n8n-smart-automation",
+            "category": "AI & Automation",
+            "duration": "2 Months",
+            "price": 22000,
+            "description": "Build automated business workflows that connect 100+ apps without writing complex code.",
+            "skills": [
+                "n8n",
+                "APIs",
+                "Webhooks",
+                "JSON",
+                "Workflow Logic",
+                "Docker"
+            ]
+        },
+        {
+            "name": "Prompt Engineering",
+            "slug": "prompt-engineering",
+            "category": "AI & Automation",
+            "duration": "2 Months",
+            "price": 18000,
+            "description": "Master the art of communicating with AI. Craft elite prompts for business, coding, and content.",
+            "skills": [
+                "LLM Mechanics",
+                "Prompt Structures",
+                "Chain of Thought",
+                "AI Agents",
+                "Hallucination Control"
+            ]
+        },
+        {
+            "name": "Java Programming",
+            "slug": "java-programming",
+            "category": "Technology & Development",
+            "duration": "3 Months",
+            "price": 30000,
+            "description": "Master the language of enterprise. Build high-performance, object-oriented software with advanced Java techniques.",
+            "skills": [
+                "Java",
+                "OOP",
+                "Data Structures",
+                "JVM Architecture",
+                "Maven",
+                "Spring Boot Basics"
+            ]
+        },
+        {
+            "name": "Digital Marketing",
+            "slug": "digital-marketing",
+            "category": "Digital Marketing & Online Business",
+            "duration": "3 Months",
+            "price": 25000,
+            "description": "Comprehensive digital marketing training covering SEO, SEM, SMM, and Email Marketing.",
+            "skills": [
+                "SEO",
+                "Google Ads",
+                "Meta Ads",
+                "Content Strategy",
+                "Analytics",
+                "Email Marketing"
+            ]
+        }
+    ],
+    "student_benefits": [
+        "Practical training on live agency projects",
+        "1:1 mentorship from industry professionals",
+        "Deployment-ready portfolio creation",
+        "Access to agency-standard tools and workflows",
+        "Job placement assistance and career guidance",
+        "Hybrid learning model (Online + Offline)"
+    ],
+    "admission_process": [
+        "1. Explore the Course Catalog on our website.",
+        "2. Schedule a free counseling session with an academic advisor.",
+        "3. Attend a live demo class to experience our teaching methodology.",
+        "4. Complete the enrollment process and join the Agency Workspace."
+    ],
+    "contact_information": {
+        "website": "https://gkwebtech.cloud",
+        "phone": "+91 9971944676",
+        "email": "contact@gkwebtech.cloud",
+        "address": "2nd Floor, Tiwari Clinic Building, Jyoti Rao Fule Circle, Alwar 301001, Rajasthan, India",
+        "whatsapp": "https://wa.me/919971944676"
+    },
+    "frequently_asked_questions": [
+        {
+            "question": "Is this an online or offline course?",
+            "answer": "We offer a hybrid model. Major technical sessions are live online, while practical labs and mentoring take place in our digital workspace. We also have physical campus facilities in Alwar."
+        },
+        {
+            "question": "Do I get a certificate?",
+            "answer": "Yes, you receive a verifiable GK Institute Certification upon successful completion of the course and project requirements."
+        },
+        {
+            "question": "What is the 'Agency Workspace'?",
+            "answer": "It's our unique training environment where you work like an employee in a digital agency, handling real tasks, deadlines, and client briefs."
+        }
+    ],
+    "counselor_instructions": {
+        "tone": "Polite, professional, helpful, and encouraging.",
+        "guidelines": [
+            "Always start by greeting the user and asking about their career goals or interests.",
+            "Recommend specific courses based on the user's mentioned interests (e.g., if they like design, suggest UI/UX; if they like logic, suggest Java or MERN).",
+            "Highlight the 'Practical Learning' aspect and the 'Agency Workspace' model as our key differentiator.",
+            "If a user is unsure, suggest starting with a 'Foundational' course or scheduling a call with a human counselor.",
+            "Encourage users to download the course brochure from the website for detailed modules.",
+            "Always guide the user to contact us via WhatsApp or Phone for direct admission inquiries.",
+            "Do not make up information; if you don't know something, ask the user to contact our support team."
+        ]
+    }
+}

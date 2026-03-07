@@ -432,8 +432,8 @@ export const PublicLayout: React.FC<{ children: React.ReactNode }> = ({ children
       {/* Global Announcement Strip */}
       <AnnouncementBar />
 
-      {/* Global AI Chat Assistant */}
-      <EduBot />
+      {/* Global AI Chat Assistant - MOVED TO GLOBAL LAYOUT */}
+      {/* <EduBot /> */}
 
       {/* Scroll to Top Button */}
       <ScrollToTopButton />
