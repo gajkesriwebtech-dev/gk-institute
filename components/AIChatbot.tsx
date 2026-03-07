@@ -77,23 +77,33 @@ export const AIChatbot: React.FC = () => {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    message: userMessage.text,
-                    sessionId: sessionId
+                    chatInput: userMessage.text, // Standard n8n AI Agent input key
+                    message: userMessage.text,   // Backup key
+                    sessionId: sessionId,
+                    action: "sendMessage"        // Optional: Some n8n workflows use this for routing
                 })
             });
 
-            if (!response.ok) throw new Error('Network response was not ok');
+            if (!response.ok) {
+                const errorData = await response.text();
+                console.error("Webhook Error Response:", errorData);
+                throw new Error(`Chatbot error: ${response.status} ${response.statusText}`);
+            }
 
             const data = await response.json();
+
+            // Extract reply from common n8n AI Agent response patterns
+            const botReply = data.output || data.reply || data.text || (Array.isArray(data) ? data[0]?.output : null);
+
             const botMessage: Message = {
                 role: 'bot',
-                text: data.reply || "I'm sorry, I couldn't process that. Please try again or contact us directly.",
+                text: botReply || "I'm sorry, I couldn't process that. Please try again or contact us directly.",
                 timestamp: new Date()
             };
 
             setMessages(prev => [...prev, botMessage]);
         } catch (error) {
-            console.error("Chatbot error:", error);
+            console.error("Chatbot communication error:", error);
             setMessages(prev => [...prev, {
                 role: 'bot',
                 text: "Error: Could not connect to the AI assistant. Please check your internet connection or try again later.",
