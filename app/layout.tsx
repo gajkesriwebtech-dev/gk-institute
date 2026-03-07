@@ -17,10 +17,19 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: SITE_NAME,
+    default: `${SITE_NAME} | Premium Web Tech Training`,
     template: `%s | ${SITE_NAME}`,
   },
-  description: SITE_DESCRIPTION,
+  description: "GK WebTech AI Institute offers industry-focused training in Web Development, AI, Data Science, and Digital Marketing with real-world projects and internship opportunities.",
+  keywords: ["web development institute", "AI training", "digital marketing course", "data science boot camp", "mern stack development", "internship programs", "software engineering"],
+  authors: [{ name: SITE_NAME }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   icons: {
     icon: FAVICON,
     shortcut: FAVICON,
@@ -28,17 +37,42 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
-    siteName: SITE_NAME,
+    locale: 'en_IN',
     url: SITE_URL,
+    siteName: SITE_NAME,
+    title: SITE_NAME,
+    description: SITE_DESCRIPTION,
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: SITE_NAME,
+      }
+    ],
   },
   twitter: {
     card: 'summary_large_image',
+    title: SITE_NAME,
+    description: SITE_DESCRIPTION,
     site: '@gkwebtech',
+    creator: '@gkwebtech',
+    images: ['/og-image.jpg'],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
+  verification: {
+    google: 'your-google-verification-code', // User can replace this later
+  }
 };
 
 export default function RootLayout({
