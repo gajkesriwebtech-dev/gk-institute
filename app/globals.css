@@ -95,7 +95,8 @@ body {
   }
 
   .shadow-premium {
-    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.12), 0 5px 15px -5px rgba(0, 0, 0, 0.08); /* Stronger shadow for light mode visibility */
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.12), 0 5px 15px -5px rgba(0, 0, 0, 0.08);
+    /* Stronger shadow for light mode visibility */
   }
 
   .dark .shadow-premium {
@@ -119,9 +120,12 @@ body {
   }
 
   @keyframes float {
-    0%, 100% {
+
+    0%,
+    100% {
       transform: translateY(0);
     }
+
     50% {
       transform: translateY(-20px);
     }
@@ -136,4 +140,21 @@ body {
     background-color: #0F172A;
     /* Slate 900 for dark mode variation */
   }
+}
+
+/* Cookie consent banner animation */
+@keyframes cookieSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-cookie-slide-up {
+  animation: cookieSlideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }

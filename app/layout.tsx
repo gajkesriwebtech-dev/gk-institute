@@ -76,6 +76,7 @@ export const metadata: Metadata = {
 };
 
 import { AIChatbot } from '@/components/AIChatbot';
+import { CookieConsentModal, CookieSettingsButton } from '@/components/cookies/CookieConsentModal';
 
 export default function RootLayout({
   children,
@@ -88,6 +89,8 @@ export default function RootLayout({
         <ThemeProvider>
           {children}
           <AIChatbot />
+          <CookieConsentModal />
+          <CookieSettingsButton />
         </ThemeProvider>
       </body>
     </html>
