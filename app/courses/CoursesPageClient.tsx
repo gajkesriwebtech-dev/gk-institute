@@ -207,6 +207,31 @@ const CoursesPageClient: React.FC = () => {
                     </div>
                 </div>
             </section>
+
+            {/* Local SEO Block — Courses in Alwar */}
+            <section className="py-14 bg-slate-50 dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800">
+                <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2 className="text-xl font-black text-slate-800 dark:text-white mb-6 text-center">
+                        Computer & Professional Courses in Alwar — GK Institute
+                    </h2>
+                    <div className="grid md:grid-cols-2 gap-6 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                        <div className="space-y-3">
+                            <p>GK Institute offers the most comprehensive range of <strong className="text-slate-800 dark:text-slate-200">computer courses in Alwar, Rajasthan</strong> — from beginner-level programs to advanced professional certifications. Whether you want to learn <strong className="text-slate-800 dark:text-slate-200">web development</strong>, <strong className="text-slate-800 dark:text-slate-200">digital marketing</strong>, or <strong className="text-slate-800 dark:text-slate-200">AI & automation</strong>, all courses include live projects and mentorship.</p>
+                            <p>Students from Alwar, Bhiwadi, Neemrana, Tijara, Rajgarh, and nearby areas regularly join GK Institute for our <strong className="text-slate-800 dark:text-slate-200">job-focused curriculum</strong> and agency workspace model, where you work on real client briefs.</p>
+                        </div>
+                        <div className="space-y-3">
+                            <p>Agar aap <em>Alwar me koi accha computer course dhundh rahe hain</em>, to GK Institute me aapko milega: MERN Stack, Digital Marketing, SEO, AI & Automation, Graphic Design, aur bahut kuch. Yahan sirf theory nahi, real projects par kaam hota hai.</p>
+                            <p>Ab GK Institute me <strong className="text-slate-800 dark:text-slate-200">20% inaugural discount</strong> chal raha hai — first 5 students ke liye. <strong className="text-slate-800 dark:text-slate-200">Aaj hi enroll karein</strong> aur apna career shuru karein.</p>
+                        </div>
+                    </div>
+                    <div className="mt-6 flex flex-wrap gap-2 justify-center">
+                        {["Web Dev Course Alwar", "Digital Marketing Alwar", "MERN Stack Alwar", "SEO Course Alwar", "AI Course Alwar", "Graphic Design Alwar", "Computer Course Alwar", "Coding Classes Alwar"].map(tag => (
+                            <span key={tag} className="px-3 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-xs font-bold text-slate-500 dark:text-slate-400">{tag}</span>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
         </PublicLayout>
     );
 };

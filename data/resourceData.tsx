@@ -368,38 +368,215 @@ export const BLOGS: BlogPost[] = [
         </p>
         <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Artificial Intelligence: The Co-Pilot for Developers</h3>
         <p className="mb-4">
-          AI is no longer a futuristic concept; it's rapidly becoming an indispensable tool for developers. From AI-powered code completion and debugging assistants to automated testing and deployment, AI is streamlining workflows and boosting productivity. Tools like GitHub Copilot are just the beginning, promising a future where AI acts as an intelligent co-pilot, freeing developers to focus on higher-level problem-solving and innovation.
+          AI is no longer a futuristic concept; it's rapidly becoming an indispensable tool for developers. From AI-powered code completion and debugging assistants to automated testing and deployment, AI is streamlining workflows and boosting productivity.
         </p>
         <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Web3 and Decentralization: A New Internet Frontier</h3>
         <p className="mb-6">
-          The promise of Web3—a decentralized internet built on blockchain technology—is gaining momentum. This shift aims to give users more control over their data and digital identities, moving away from centralized platforms. Developers are exploring new architectures, smart contracts, and decentralized applications (dApps) that leverage the power of blockchain, NFTs, and cryptocurrencies. Understanding these foundational concepts will be crucial for building the next generation of web experiences.
+          The promise of Web3—a decentralized internet built on blockchain technology—is gaining momentum. Developers are exploring new architectures, smart contracts, and decentralized applications (dApps) that leverage the power of blockchain.
         </p>
-        <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Beyond the Hype: Other Transformative Trends</h3>
-        <ul className="list-disc pl-5 space-y-3 mb-8 text-slate-700 dark:text-slate-300">
-          <li>
-            <strong>Low-Code/No-Code Platforms:</strong> These platforms are democratizing development, allowing non-technical users to build applications with minimal to no coding. While not replacing traditional development, they enable rapid prototyping and empower smaller teams to launch products faster.
-          </li>
-          <li>
-            <strong>Edge Computing:</strong> Moving computation closer to the data source reduces latency and improves performance. Edge computing is becoming increasingly relevant for real-time applications, IoT devices, and immersive web experiences.
-          </li>
-          <li>
-            <strong>The Rise of Rust:</strong> Known for its performance, memory safety, and concurrency, Rust is gaining traction as a preferred language for systems programming, WebAssembly, and even backend web services, offering a robust alternative to traditional choices.
-          </li>
-          <li>
-            <strong>Green Software Development:</strong> As environmental concerns grow, developers are increasingly focusing on building energy-efficient applications and infrastructure, minimizing the carbon footprint of digital services.
-          </li>
-        </ul>
         <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Preparing for the Future at GK Institute</h3>
+        <p className="mb-8">
+          At GK Institute, our curriculum is continuously updated to reflect these emerging trends. We equip our students with the skills and foresight needed to thrive in this evolving landscape.
+        </p>
+      </>
+    )
+  },
+
+  // ─── LOCAL SEO BLOG POSTS (Alwar / Hinglish targeting) ───────────────────
+
+  {
+    id: '8',
+    slug: 'web-development-course-alwar',
+    title: "Alwar me Web Development Course kahan se karein? — GK Institute Guide",
+    excerpt: "Web development seekhna chahte hain Alwar me? Is guide me jaaniye GK Institute ka MERN Stack program kya offer karta hai, kaisa curriculum hai, aur Alwar ke students ke liye best option kyun hai.",
+    category: "Career Advice",
+    readTime: "6 min read",
+    image: "/images/blog-future.png",
+    date: "Mar 09, 2024",
+    author: "GK Institute Team",
+    authorRole: "Career Advisors, GK Institute Alwar",
+    authorImage: "https://ui-avatars.com/api/?name=GK+Institute&background=1F4037&color=fff",
+    content: (
+      <>
+        <p className="lead text-xl text-slate-600 dark:text-slate-300 mb-8">
+          If you are searching for a <strong>web development course in Alwar</strong>, you have landed in the right place. GK Institute is one of the top-rated professional training institutes in Alwar, Rajasthan, offering hands-on, project-based web development programs.
+        </p>
+        <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Web Development Course Alwar me kyun karein?</h3>
         <p className="mb-4">
-          At GK Institute, our curriculum is continuously updated to reflect these emerging trends. We equip our students with the skills and foresight needed to thrive in this evolving landscape, ensuring they are not just current but future-ready.
+          Alwar me web development ki demand tezi se badh rahi hai. Local businesses, startups, aur e-commerce companies ko skilled developers ki zaroorat hai. Agar aap <em>Alwar me web development course</em> karke ek strong career banana chahte hain, to GK Institute aapke liye sabse practical choice hai.
+        </p>
+        <p className="mb-6">
+          Bahut saare students Jaipur ya Delhi jaate hain courses ke liye — lekin ab Alwar me hi world-class training available hai. GK Institute ke MERN Stack program me aap MongoDB, Express.js, React, aur Node.js seekhte hain — wahi skills jo companies hire karte waqt dhundhti hain.
+        </p>
+        <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">What You Learn: MERN Stack Web Development</h3>
+        <ul className="list-disc pl-5 space-y-3 mb-8 text-slate-700 dark:text-slate-300">
+          <li><strong>HTML, CSS & JavaScript Fundamentals</strong> — the building blocks of every website</li>
+          <li><strong>React.js</strong> — build fast, interactive user interfaces</li>
+          <li><strong>Node.js & Express.js</strong> — build backend APIs and servers</li>
+          <li><strong>MongoDB</strong> — modern database management</li>
+          <li><strong>Real Client Projects</strong> — through GK Agency Workspace</li>
+          <li><strong>Deployment & DevOps basics</strong> — deploy your apps live</li>
+        </ul>
+        <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Alwar me Best Web Development Institute: GK Institute</h3>
+        <p className="mb-4">
+          GK Institute Alwar me na sirf theory padhate hain — yahan students real client projects complete karte hain aur ek portfolio banate hain jo job interviews me kaam aata hai. Our <a href="/courses" className="text-[#1F4037] dark:text-emerald-400 font-bold hover:underline">full course catalog</a> includes programs for every skill level.
+        </p>
+        <p className="mb-4">
+          Address: 2nd Floor, Tiwari Clinic Building, Jyoti Rao Fule Circle, Alwar 301001. Call: <a href="tel:+919971944676" className="text-[#1F4037] dark:text-emerald-400 font-bold hover:underline">+91 9971944676</a>
         </p>
         <p className="mb-8">
-          The future of web development is exciting and complex. By embracing continuous learning and staying informed about these transformative trends, you can position yourself at the forefront of innovation.
+          Ready to start? <a href="/contact" className="text-[#1F4037] dark:text-emerald-400 font-bold hover:underline">Contact us today</a> and enroll in our next batch.
+        </p>
+      </>
+    )
+  },
+
+  {
+    id: '9',
+    slug: 'digital-marketing-course-alwar',
+    title: "Digital Marketing Course in Alwar — Poori Jaankari (GK Institute)",
+    excerpt: "Alwar me digital marketing course karna chahte hain? Is article me jaaniye GK Institute ka Digital Marketing Mastery program kya sikhata hai, fees, duration, aur career scope kya hai.",
+    category: "Marketing",
+    readTime: "7 min read",
+    image: "/images/blog-marketing.png",
+    date: "Mar 09, 2024",
+    author: "GK Institute Team",
+    authorRole: "Career Advisors, GK Institute Alwar",
+    authorImage: "https://ui-avatars.com/api/?name=GK+Institute&background=1F4037&color=fff",
+    content: (
+      <>
+        <p className="lead text-xl text-slate-600 dark:text-slate-300 mb-8">
+          Digital marketing is one of the fastest-growing career fields in India — and if you are looking for a <strong>digital marketing course in Alwar</strong>, GK Institute offers a comprehensive, practical program that prepares you for real campaigns and real results.
+        </p>
+        <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Digital Marketing Course Alwar me kyun karein?</h3>
+        <p className="mb-4">
+          Aaj ke time me har business — chahe chota ho ya bada — digital presence chahta hai. Alwar ke local businesses bhi Facebook Ads, Google Ads, aur SEO ke zariye customers dhundh rahe hain. Agar aap <em>Alwar me digital marketing sikhe</em>, to aap freelancing, job, ya apna business — teen options me se koi bhi choose kar sakte hain.
+        </p>
+        <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">What We Teach: Digital Marketing Mastery Program</h3>
+        <ul className="list-disc pl-5 space-y-3 mb-8 text-slate-700 dark:text-slate-300">
+          <li><strong>Search Engine Optimization (SEO)</strong> — rank on Google for free</li>
+          <li><strong>Google Ads & PPC</strong> — paid advertising that converts</li>
+          <li><strong>Meta Ads (Facebook & Instagram)</strong> — targeted social media campaigns</li>
+          <li><strong>Content Marketing & Copywriting</strong> — write content that sells</li>
+          <li><strong>Email Marketing</strong> — build and nurture your audience</li>
+          <li><strong>Analytics & Reporting</strong> — measure and improve performance</li>
+          <li><strong>Live Client Campaigns</strong> — real experience through our Agency Workspace</li>
+        </ul>
+        <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Career Scope After Digital Marketing Course in Alwar</h3>
+        <p className="mb-4">
+          GK Institute ke graduates Alwar aur bahar bhi digital marketing jobs kar rahe hain, freelancing kar rahe hain, aur apna khud ka agency business chala rahe hain. Average starting salary for digital marketers in India: ₹3–6 LPA.
+        </p>
+        <p className="mb-8">
+          View our <a href="/courses" className="text-[#1F4037] dark:text-emerald-400 font-bold hover:underline">Digital Marketing Mastery course details</a> or <a href="/contact" className="text-[#1F4037] dark:text-emerald-400 font-bold hover:underline">enquire now</a> to speak with our career advisors.
+        </p>
+      </>
+    )
+  },
+
+  {
+    id: '10',
+    slug: 'mern-stack-kya-hai',
+    title: "MERN Stack Kya Hai? Full Guide in Hindi — Web Development ke liye",
+    excerpt: "MERN Stack kya hota hai? MongoDB, Express, React, aur Node.js ke baare me poori jaankari — is guide me samjhiye MERN Stack kyun seekhna chahiye aur Alwar me kahan se karein.",
+    category: "Engineering",
+    readTime: "8 min read",
+    image: "/images/blog-react.png",
+    date: "Mar 09, 2024",
+    author: "GK Institute Team",
+    authorRole: "Web Development Faculty, GK Institute",
+    authorImage: "https://ui-avatars.com/api/?name=GK+Institute&background=1F4037&color=fff",
+    content: (
+      <>
+        <p className="lead text-xl text-slate-600 dark:text-slate-300 mb-8">
+          MERN Stack ek popular web development technology stack hai jo 4 tools se milkar bana hai: <strong>MongoDB, Express.js, React.js, aur Node.js</strong>. Aaj ke time me zyada tar modern web applications MERN Stack ke zariye hi banai ja rahi hain.
+        </p>
+        <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">MERN Stack ke 4 Parts: Detailed Explanation</h3>
+        <ul className="list-disc pl-5 space-y-3 mb-8 text-slate-700 dark:text-slate-300">
+          <li>
+            <strong>M — MongoDB:</strong> Ye ek NoSQL database hai jahan data JSON-like format me store hota hai. Traditional SQL databases se alag, ye zyada flexible hai aur modern apps ke liye ideal hai.
+          </li>
+          <li>
+            <strong>E — Express.js:</strong> Ye Node.js ke upar ek web application framework hai jo backend APIs banane me help karta hai. Server-side logic yahan likhte hain.
+          </li>
+          <li>
+            <strong>R — React.js:</strong> Facebook ka banaya hua JavaScript library hai jo frontend (jo user dikhta hai) banane ke liye use hota hai. Fast, component-based UI development ke liye best hai.
+          </li>
+          <li>
+            <strong>N — Node.js:</strong> JavaScript ko server-side run karne ka environment. Isse aap ek hi language (JavaScript) me frontend aur backend dono likh sakte hain.
+          </li>
+        </ul>
+        <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">MERN Stack kyun seekhna chahiye?</h3>
+        <p className="mb-4">
+          MERN Stack India me bahut popular career choice hai kyunki: (1) companies actively hire karein MERN developers, (2) ek hi language (JavaScript) se poora full-stack app banana possible hai, (3) salary package 4–12 LPA hoti hai experienced developers ke liye.
+        </p>
+        <p className="mb-6">
+          Agar aap <em>Alwar me MERN Stack course</em> dhundh rahe hain, to GK Institute ka Full Stack Development program aapke liye best option hai. Yahan sirf theory nahi — real projects, live deployments, aur industry mentors ke saath kaam karte hain.
+        </p>
+        <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">MERN Stack Course in Alwar — GK Institute</h3>
+        <p className="mb-8">
+          GK Institute ke MERN Stack program me aap 4–6 months me industry-ready developer ban sakte hain. Course details ke liye visit karein: <a href="/courses" className="text-[#1F4037] dark:text-emerald-400 font-bold hover:underline">All Courses</a> ya <a href="/contact" className="text-[#1F4037] dark:text-emerald-400 font-bold hover:underline">abhi enquiry karein</a>.
+        </p>
+      </>
+    )
+  },
+
+  {
+    id: '11',
+    slug: 'computer-course-alwar',
+    title: "Best Computer Course in Alwar — Sab Kuch Jaaniye (2024 Guide)",
+    excerpt: "Alwar me best computer course kaunsa hai? Is guide me jaaniye GK Institute ke sabhi courses ke baare me — Web Development, Digital Marketing, AI, Graphic Design — aur apne liye best option choose karein.",
+    category: "Career Advice",
+    readTime: "9 min read",
+    image: "/images/blog-tutorial-hell.png",
+    date: "Mar 09, 2024",
+    author: "GK Institute Team",
+    authorRole: "Admissions Team, GK Institute Alwar",
+    authorImage: "https://ui-avatars.com/api/?name=GK+Institute&background=1F4037&color=fff",
+    content: (
+      <>
+        <p className="lead text-xl text-slate-600 dark:text-slate-300 mb-8">
+          Alwar me computer course karna chahte hain but samajh nahi aa raha kaunsa best hai? Is detailed guide me hum aapko batayenge GK Institute ke sabhi professional programs ke baare me — taki aap sahi decision le sakein.
+        </p>
+        <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Alwar me Computer Courses — Overview</h3>
+        <p className="mb-4">
+          GK Institute, Alwar ka ek leading professional skills training center hai jo <strong>technology, design, marketing, aur AI</strong> me specialised courses offer karta hai. Yahan basic computer courses se lekar advanced professional certifications tak sab kuch available hai.
+        </p>
+        <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Top Computer Courses Available in Alwar at GK Institute</h3>
+        <ul className="list-disc pl-5 space-y-4 mb-8 text-slate-700 dark:text-slate-300">
+          <li>
+            <strong>MERN Stack Web Development</strong> — Full-stack developer banne ka fastest path. MongoDB, React, Node.js seekhiye aur real websites banayein. <a href="/courses" className="text-[#1F4037] dark:text-emerald-400 font-bold hover:underline">Details dekhe</a>
+          </li>
+          <li>
+            <strong>Digital Marketing Mastery</strong> — SEO, Google Ads, Meta Ads, Content Marketing. Brands ki online presence grow karein. Great for freelancers.
+          </li>
+          <li>
+            <strong>AI & Automation</strong> — n8n workflows, OpenAI API, aur automation tools se business processes automate karein. India ka most in-demand skill.
+          </li>
+          <li>
+            <strong>Graphic Design & Branding</strong> — Figma, Photoshop, Illustrator. Logos, social media creatives, aur brand identities banayein.
+          </li>
+          <li>
+            <strong>Data Science & Analytics</strong> — Python, SQL, Power BI se data ko insights me convert karein.
+          </li>
+        </ul>
+        <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">GK Institute Alwar kyun choose karein?</h3>
+        <ul className="list-disc pl-5 space-y-3 mb-8 text-slate-700 dark:text-slate-300">
+          <li>✅ Real client projects — sirf theory nahi</li>
+          <li>✅ Industry mentors with 5+ years experience</li>
+          <li>✅ Agency workspace model — professional environment</li>
+          <li>✅ Portfolio building — employers ko impress karein</li>
+          <li>✅ Placement support — job dhundne me help</li>
+          <li>✅ 20% inaugural discount — limited seats</li>
+        </ul>
+        <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Admission Process aur Contact</h3>
+        <p className="mb-8">
+          GK Institute, 2nd Floor, Tiwari Clinic Building, Jyoti Rao Fule Circle, Alwar 301001, Rajasthan. Call: <a href="tel:+919971944676" className="text-[#1F4037] dark:text-emerald-400 font-bold hover:underline">+91 9971944676</a> | Email: <a href="mailto:contact@gkwebtech.cloud" className="text-[#1F4037] dark:text-emerald-400 font-bold hover:underline">contact@gkwebtech.cloud</a>. Visit our <a href="/contact" className="text-[#1F4037] dark:text-emerald-400 font-bold hover:underline">contact page</a> to book a free counselling session.
         </p>
       </>
     )
   }
 ];
+
 
 // --- EBOOKS ---
 export const EBOOKS: Ebook[] = [

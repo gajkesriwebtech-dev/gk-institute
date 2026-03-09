@@ -5,9 +5,34 @@ import { SITE_NAME, SITE_DESCRIPTION, SITE_URL } from '@/constants/site';
 import Schema from '@/components/Schema';
 
 export const metadata: Metadata = {
-    title: "Professional Web Development & AI Training | GK Institute",
-    description: "Master the latest in Web Development, AI, Data Science, and Digital Marketing. GK Institute provides industry-focused training, real-world projects, and career-accelerating certifications.",
-    keywords: ["web development Jaipur", "AI courses", "digital marketing training Jaipur", "mern stack course", "data science institute", "industry projects", "job-ready skills"],
+    title: "Professional Web Development & AI Training in Alwar | GK Institute",
+    description: "Master Web Development, AI, Digital Marketing & more at GK Institute Alwar, Rajasthan. Industry-focused training with real projects and job placement support. Alwar me best computer course ke liye GK Institute join karein.",
+    keywords: [
+        // English local keywords
+        "web development course Alwar",
+        "digital marketing course Alwar",
+        "computer course Alwar",
+        "best institute in Alwar for web development",
+        "MERN stack course Alwar",
+        "SEO course Alwar",
+        "IT training institute Alwar",
+        "coding classes Alwar",
+        "software training Alwar Rajasthan",
+        // Hinglish keywords (exact how students type)
+        "Alwar me web development course",
+        "Alwar me digital marketing course",
+        "Alwar me computer course",
+        "Alwar me MERN stack sikhe",
+        "Alwar me coding course",
+        "Alwar me SEO course Hindi me",
+        "Alwar ka sabse accha computer institute",
+        // Generic useful keywords
+        "AI courses India",
+        "mern stack course",
+        "data science institute",
+        "industry projects training",
+        "job ready skills"
+    ],
     alternates: {
         canonical: SITE_URL,
     },
@@ -19,14 +44,16 @@ export const metadata: Metadata = {
     }
 };
 
+
 const page = () => {
     const organizationSchema = {
         "@context": "https://schema.org",
-        "@type": "EducationalOrganization",
+        "@type": ["EducationalOrganization", "LocalBusiness"],
         "name": SITE_NAME,
         "url": SITE_URL,
         "logo": `${SITE_URL}/logo.png`,
-        "description": SITE_DESCRIPTION,
+        "image": `${SITE_URL}/og-image.jpg`,
+        "description": "GK Institute is a professional skills training institute in Alwar, Rajasthan offering courses in Web Development, Digital Marketing, AI, and more.",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "2nd Floor, Tiwari Clinic Building, Jyoti Rao Fule Circle",
@@ -34,6 +61,36 @@ const page = () => {
             "postalCode": "301001",
             "addressRegion": "Rajasthan",
             "addressCountry": "IN"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 27.5679,
+            "longitude": 76.6001
+        },
+        "areaServed": [
+            { "@type": "City", "name": "Alwar" },
+            { "@type": "State", "name": "Rajasthan" },
+            { "@type": "Country", "name": "India" }
+        ],
+        "knowsAbout": [
+            "Web Development",
+            "MERN Stack Development",
+            "Digital Marketing",
+            "Search Engine Optimization",
+            "AI and Automation",
+            "Graphic Design",
+            "Data Science",
+            "Computer Courses"
+        ],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Professional Skill Programs",
+            "itemListElement": [
+                { "@type": "Offer", "itemOffered": { "@type": "Course", "name": "MERN Stack Development" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Course", "name": "Digital Marketing Mastery" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Course", "name": "AI & Automation" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Course", "name": "Graphic Design" } }
+            ]
         },
         "contactPoint": {
             "@type": "ContactPoint",
@@ -48,6 +105,7 @@ const page = () => {
             "https://twitter.com/gkwebtech"
         ]
     };
+
 
     return (
         <>

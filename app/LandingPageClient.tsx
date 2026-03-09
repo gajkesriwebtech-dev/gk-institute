@@ -738,6 +738,51 @@ const LandingPageClient = () => {
                 </div>
             </section>
 
+            {/* Local SEO Content Block — Alwar Campus */}
+            <section className="py-16 bg-slate-50 dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800">
+                <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-8">
+                        <span className="inline-block px-4 py-1 rounded-full bg-[#1F4037]/10 text-[#1F4037] dark:text-emerald-400 text-xs font-black uppercase tracking-widest mb-3">
+                            About Our Alwar Campus
+                        </span>
+                        <h2 className="text-2xl font-black text-slate-900 dark:text-white">
+                            Best Computer Training Institute in Alwar, Rajasthan
+                        </h2>
+                    </div>
+                    <div className="grid md:grid-cols-2 gap-8 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                        <div className="space-y-4">
+                            <p>
+                                GK Institute is one of the leading <strong className="text-slate-800 dark:text-slate-200">professional skill training institutes in Alwar, Rajasthan</strong>. We offer industry-focused programs in Web Development, Digital Marketing, AI & Automation, Graphic Design, and more — designed to make students job-ready in 3 to 6 months.
+                            </p>
+                            <p>
+                                If you are looking for a <strong className="text-slate-800 dark:text-slate-200">web development course in Alwar</strong> or a <strong className="text-slate-800 dark:text-slate-200">digital marketing course near you</strong>, GK Institute provides hands-on training with real client projects through our agency workspace model.
+                            </p>
+                            <p>
+                                Our students have gone on to work at leading companies and run their own digital businesses across India. We are proud to be one of the most trusted computer institutes in Alwar for students from Class 12 onwards, graduates, and working professionals.
+                            </p>
+                        </div>
+                        <div className="space-y-4">
+                            <p>
+                                <strong className="text-slate-800 dark:text-slate-200">Hinglish:</strong> Agar aap <em>Alwar me web development course</em>, <em>digital marketing course Alwar</em>, ya koi bhi <em>computer course in Alwar</em> dhundh rahe hain — to GK Institute aapke liye sabse accha choice hai. Yahan students real projects par kaam karte hain, sirf theory nahi padhte.
+                            </p>
+                            <p>
+                                GK Institute me <strong className="text-slate-800 dark:text-slate-200">MERN Stack, SEO, AI & Automation, Graphic Design</strong> aur bahut saare courses available hain. Alwar ke students ke liye ye sabse practical aur affordable training center hai.
+                            </p>
+                            <p>
+                                <strong className="text-slate-800 dark:text-slate-200">Address:</strong> 2nd Floor, Tiwari Clinic Building, Jyoti Rao Fule Circle, Alwar 301001, Rajasthan. Call us: <a href="tel:+919971944676" className="text-[#1F4037] dark:text-emerald-400 hover:underline font-bold">+91 9971944676</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div className="mt-8 flex flex-wrap gap-2 justify-center">
+                        {["Web Development Course Alwar", "Digital Marketing Course Alwar", "MERN Stack Course Alwar", "Computer Course Alwar", "SEO Course Alwar", "AI Course Alwar", "Graphic Design Alwar"].map(tag => (
+                            <span key={tag} className="px-3 py-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-xs font-bold text-slate-500 dark:text-slate-400">
+                                {tag}
+                            </span>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
         </PublicLayout>
     );
 };
