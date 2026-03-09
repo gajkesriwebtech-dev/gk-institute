@@ -84,32 +84,6 @@ const DOMAIN_CARDS = [
     }
 ];
 
-const PORTFOLIO_PROJECTS = [
-    {
-        title: "E-Commerce Re-Design",
-        category: "UI/UX & Frontend",
-        image: "/images/blog-figma.png",
-        student: "Ayush Sharma"
-    },
-    {
-        title: "Automated Lead Gen Bot",
-        category: "AI & Automation",
-        image: "/images/blog-automation.png",
-        student: "Neha Gupta"
-    },
-    {
-        title: "SaaS Marketing Campaign",
-        category: "Digital Marketing",
-        image: "/images/blog-marketing.png",
-        student: "Vikram Singh"
-    },
-    {
-        title: "Real Estate Dashboard",
-        category: "Full Stack Dev",
-        image: "/images/blog-react.png",
-        student: "Rohan Mehra"
-    }
-];
 
 const LandingPageClient = () => {
     const router = useRouter();

@@ -83,8 +83,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={poppins.variable}>
-      <body className="bg-white dark:bg-slate-950 transition-colors duration-300 font-sans">
+    <html lang="en" className={poppins.variable} suppressHydrationWarning>
+      <body className="bg-white dark:bg-slate-950 transition-colors duration-300 font-sans" suppressHydrationWarning>
         <ThemeProvider>
           {children}
           <AIChatbot />

@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { PublicLayout } from '@/components/Layouts';
 import { SectionHeading, SectionSubheading, Button, Icons, Card, Badge } from '@/components/ui';
@@ -10,44 +11,10 @@ import { cld } from '@/lib/cloudinary';
 import { getBasePrice } from '@/lib/coursePricing';
 import MediaImage from '@/components/ui/MediaImage';
 import { GKCertificate } from '@/components/GKCertificate';
+import { students } from '@/data/students';
+import { StudentCard } from '@/components/portfolio/StudentCard';
 
-const PORTFOLIO_PROJECTS = [
-    {
-        title: "Full-Stack SaaS Platform",
-        category: "Web Development & DevOps",
-        image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800",
-        student: "Utkarsh Sharma",
-        driveLink: "https://drive.google.com/drive/folders/your-link-here-1"
-    },
-    {
-        title: "Automated Enterprise Workflows",
-        category: "AI & Automation",
-        image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800",
-        student: "Neha Gupta",
-        driveLink: "https://drive.google.com/drive/folders/your-link-here-2"
-    },
-    {
-        title: "Global E-commerce Campaign",
-        category: "Digital Marketing",
-        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
-        student: "Vikram Singh",
-        driveLink: "https://drive.google.com/drive/folders/your-link-here-3"
-    },
-    {
-        title: "Brand Identity Discovery",
-        category: "Graphic Design",
-        image: "https://images.unsplash.com/photo-1586717791821-3f44a16ed321?auto=format&fit=crop&q=80&w=800",
-        student: "Rohan Mehra",
-        driveLink: "https://drive.google.com/drive/folders/your-link-here-4"
-    },
-    {
-        title: "Cinematic Product Ad",
-        category: "Video Editing",
-        image: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=800",
-        student: "Simran Kaur",
-        driveLink: "https://drive.google.com/drive/folders/your-link-here-5"
-    }
-];
+
 
 const CertificationsClient = () => {
     const router = useRouter();
@@ -239,45 +206,9 @@ const CertificationsClient = () => {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {PORTFOLIO_PROJECTS.map((project, idx) => (
-                            <a
-                                key={idx}
-                                href={project.driveLink}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="group relative rounded-2xl overflow-hidden shadow-xl bg-slate-900 aspect-[4/5] cursor-pointer block"
-                            >
-                                <MediaImage
-                                    src={project.image}
-                                    alt={project.title}
-                                    width={800}
-                                    height={1000}
-                                    className="w-full h-full object-cover opacity-70 group-hover:opacity-50 transition-all duration-700 group-hover:scale-110"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-
-                                {/* View Icon Overlay */}
-                                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                    <div className="w-12 h-12 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/30 transform scale-75 group-hover:scale-100 transition-transform duration-500">
-                                        <Icons.ExternalLink className="w-6 h-6 text-white" />
-                                    </div>
-                                </div>
-
-                                <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
-                                    <Badge className="bg-white/20 backdrop-blur-md text-white border-white/30 mb-3 text-[8px] px-2 py-0">
-                                        {project.category}
-                                    </Badge>
-                                    <h3 className="text-lg font-black text-white mb-2 leading-tight">
-                                        {project.title}
-                                    </h3>
-                                    <div className="flex items-center gap-2 text-slate-300 font-bold uppercase tracking-widest text-[8px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-                                        <span>By {project.student}</span>
-                                        <span className="w-1 h-1 bg-slate-500 rounded-full"></span>
-                                        <span className="text-emerald-400">View Project →</span>
-                                    </div>
-                                </div>
-                            </a>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                        {students.map((student) => (
+                            <StudentCard key={student.slug} student={student} />
                         ))}
                     </div>
                 </div>

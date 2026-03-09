@@ -29,7 +29,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     role: "Founder & Director",
     department: "Management",
     bio: "Leads strategy and partnerships across learning and hiring ecosystems.",
-    avatarUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=facearea&facepad=2&w=400&h=400&q=80",
+    avatarUrl: cld("Founder_kwgszb", 400),
     isLeadership: true,
     socialLinks: {
       linkedin: "https://www.linkedin.com/in/dr-a-tiwari-gkwebtech-cloud-03570938a/",
@@ -43,7 +43,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     role: "Managing Director",
     department: "Management",
     bio: "Drives technology vision, platform architecture, automation and engineering excellence.",
-    avatarUrl: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=facearea&facepad=2&w=400&h=400&q=80",
+    avatarUrl: cld("Preeti_kyad0g", 400),
     isLeadership: true,
     socialLinks: {
       linkedin: "https://www.linkedin.com/in/preetitiwari2025/",
@@ -57,7 +57,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     role: "Advisor",
     department: "Management",
     bio: "Drives technology vision, platform architecture, automation and engineering excellence.",
-    avatarUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=facearea&facepad=2&w=400&h=400&q=80",
+    avatarUrl: cld("judith_aruw3a", 400),
     isLeadership: true,
     socialLinks: {
       linkedin: "https://www.linkedin.com/in/judithspek/",
@@ -71,7 +71,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     role: "Cheif Technical Officer",
     department: "Technology",
     bio: "Drives technology vision, platform architecture, automation and engineering excellence.",
-    avatarUrl: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=facearea&facepad=2&w=400&h=400&q=80",
+    avatarUrl: cld("Utkarsh1_yiat7m", 400),
     isLeadership: true,
     socialLinks: {
       linkedin: "https://www.linkedin.com/in/utkarsh-sharma-2b9110362",

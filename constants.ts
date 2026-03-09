@@ -24,6 +24,7 @@ export const NAVBAR_LINKS = [
     href: '/resources',
     children: [
       { label: 'Agency Blog', href: '/blog', description: 'Stay ahead with industry insights, tutorials, and career advice.' },
+      { label: 'Student Portfolios', href: '/portfolio', description: 'Explore project showcases and professional profiles of our graduates.' },
       { label: 'Micro-Lessons', href: '/micro-lessons', description: 'Bite-sized technical workshops and rapid skill-building gems.' },
       { label: 'Free Ebooks', href: '/ebooks', description: 'Deep-dive guides and playbooks to accelerate your professional journey.' }
     ]
